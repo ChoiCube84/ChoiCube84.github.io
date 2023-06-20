@@ -4,6 +4,7 @@ description:        A Blog made by ChoiCube84
 author:             ChoiCube84
 baseurl:            ""
 url:                "https://choicube84.github.io"
+timezone: Asia/Seoul
 
 # Social Profiles
 twitter_username:   
