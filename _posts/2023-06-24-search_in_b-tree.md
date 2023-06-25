@@ -3,7 +3,7 @@ layout: post
 title: "B-Tree에 대하여 - 2"
 subtitle: "B-Tree에서 키를 찾는 법"
 date: 2023-06-24 22:07:00+0900
-background: '/img/posts/2023-06-24/B-Tree.png'
+background: '/img/posts/2023/June/B-Tree.png'
 katex: true
 ---
 
@@ -30,7 +30,8 @@ B-Tree에서 Search는 이름 그대로 특정 키 값이 트리 내부에 존�
 ## 예시
 
 아래 그림과 같은 B-Tree를 생각해보자.
-![26개의 원소를 가진 B Tree](/img/posts/2023-06-24/b-tree_1.png)
+
+<img src="/img/posts/2023/June/24/b-tree_1.png" width="100%" height="100%" alt="26개의 원소를 가진 B Tree">
 
 이 B-Tree는 order가 $3$인 B-Tree이며, 총 26개의 키가 저장되어 있다. 이 B-Tree에서 8, 13, 27을 탐색하는 과정을 알아보겠다.
 
@@ -46,11 +47,11 @@ B-Tree에서 Search는 이름 그대로 특정 키 값이 트리 내부에 존�
 
 우선 루트 노드인 $(9, 18)$ 노드에서 탐색을 시작한다. 찾으려 하는 키값인 $8$은 루트 노드의 첫 번째 키값인 $9$보다 작으므로, 왼쪽 subtree에서 탐색을 이어간다.
 
-![왼쪽 subtree](/img/posts/2023-06-24/b-tree_2.png)
+<img src="/img/posts/2023/June/24/b-tree_2.png" width="100%" height="100%" alt="왼쪽 subtree">
 
 다음은 $(3, 6)$에서 탐색을 이어간다. 찾고자 하는 키값인 $8$은 현재 노드의 마지막 키값인 $6$보다 크므로, 오른쪽 subtree에서 탐색을 이어간다.
 
-![왼쪽 subtree의 오른쪽 subtree](/img/posts/2023-06-24/b-tree_3.png)
+<img src="/img/posts/2023/June/24/b-tree_3.png" width="100%" height="100%" alt="왼쪽 subtree의 오른쪽 subtree">
 
 현재 노드에서 우리가 찾고 있던 키값인 $8$을 확인할 수 있다. 이 트리에는 $8$이 존재한다는 사실을 확인할 수 있다.
 
@@ -58,11 +59,11 @@ B-Tree에서 Search는 이름 그대로 특정 키 값이 트리 내부에 존�
 
 우선 루트 노드인 $(9, 18)$ 노드에서 탐색을 시작한다. 찾으려 하는 키값인 $13$은 루트 노드의 첫 번째 키값인 $9$보다 크고, '두 번째' 키값인 $18$보다 작으므로, 가운데 subtree에서 탐색을 이어간다.
 
-![가운데 subtree](/img/posts/2023-06-24/b-tree_4.png)
+<img src="/img/posts/2023/June/24/b-tree_4.png" width="100%" height="100%" alt="가운데 subtree">
 
 다음은 $(12, 15)$ 노드에서 탐색을 이어간다. 찾고자 하는 키값인 $13$은 현재 노드의 첫 번째 키값인 $12$보다 크고, '두 번째' 키값인 $15$보다 작으므로, 가운데 subtree에서 탐색을 이어간다.
 
-![가운데 subtree의 가운데 subtree](/img/posts/2023-06-24/b-tree_5.png)
+<img src="/img/posts/2023/June/24/b-tree_5.png" width="100%" height="100%" alt="가운데 subtree의 가운데 subtree">
 
 현재 노드에서 우리가 찾고 있던 키값인 $13$을 확인할 수 있다. 이 트리에는 $13$이 존재한다는 사실을 확인할 수 있다.
 
@@ -70,11 +71,11 @@ B-Tree에서 Search는 이름 그대로 특정 키 값이 트리 내부에 존�
 
 우선 루트 노드인 $(9, 18)$ 노드에서 탐색을 시작한다. 찾으려 하는 키값인 $27$은 루트 노드의 마지막 키값인 $18$보다 크므로, 오른쪽 subtree에서 탐색을 이어간다.
 
-![오른쪽 subtree](/img/posts/2023-06-24/b-tree_6.png)
+<img src="/img/posts/2023/June/24/b-tree_6.png" width="100%" height="100%" alt="오른쪽 subtree">
 
 다음은 $(21, 24)$ 노드에서 탐색을 이어간다. 찾고자 하는 키값인 $27$은 현재 노드의 마지막 키값인 $24$보다 크므로, 오른쪽 subtree에서 탐색을 이어간다.
 
-![왼쪽 subtree의 오른쪽 subtree](/img/posts/2023-06-24/b-tree_7.png)
+<img src="/img/posts/2023/June/24/b-tree_7.png" width="100%" height="100%" alt="오른쪽 subtree의 오른쪽 subtree">
 
 현재 $(25, 26)$ 노드에는 $27$이 존재하지 않는다. 그러나 이 노드는 리프 노드이기 때문에 더 이상 탐색을 진행할 수 없고, 이 B-Tree에는 $27$이 존재하지 않는다는 사실을 확인할 수 있다.
 
@@ -88,5 +89,5 @@ B-Tree에서 Search는 이름 그대로 특정 키 값이 트리 내부에 존�
 오늘의 개발은 여기까지!
 
 - - -
-<a name="footnote_1">1</a>: <https://velog.io/@dohaeng0/GitHub-Project-Issue-%ED%99%9C%EC%9A%A9#:~:text=%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98%20%EA%B8%B0%ED%9A%8D%20%2C%20%EC%9E%91%EC%97%85%20%2C%20%EA%B0%9C%EC%84%A0,%EC%9E%91%EC%97%85%EC%9D%84%20%EC%A7%84%ED%96%89%ED%95%A0%20%EC%88%98%20%EC%9E%88%EB%8B%A4.>  
+<a name="footnote_1">1</a>: [velog 링크](https://velog.io/@dohaeng0/GitHub-Project-Issue-%ED%99%9C%EC%9A%A9#:~:text=%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98%20%EA%B8%B0%ED%9A%8D%20%2C%20%EC%9E%91%EC%97%85%20%2C%20%EA%B0%9C%EC%84%A0,%EC%9E%91%EC%97%85%EC%9D%84%20%EC%A7%84%ED%96%89%ED%95%A0%20%EC%88%98%20%EC%9E%88%EB%8B%A4.)  
 <a name="footnote_2">2</a>: <https://en.wikipedia.org/wiki/B-tree>  

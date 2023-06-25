@@ -3,7 +3,7 @@ layout: post
 title: "개발 블로그의 시작"
 subtitle: "Hello World!"
 date: 2023-06-20 23:12:00+0900
-background: '/img/posts/2023-06-20/sprout.jpg'
+background: '/img/posts/2023/June/20/sprout.jpg'
 katex: true
 ---
 

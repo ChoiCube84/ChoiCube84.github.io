@@ -3,7 +3,7 @@ layout: post
 title: "나의 B-Tree 프로젝트"
 subtitle: "이번 여름방학 첫 개인 프로젝트"
 date: 2023-06-22 23:56:00+0900
-background: '/img/posts/2023-06-22/B-Tree.png'
+background: '/img/posts/2023/June/B-Tree.png'
 katex: true
 ---
 

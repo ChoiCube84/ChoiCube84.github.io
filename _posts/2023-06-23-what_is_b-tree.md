@@ -3,7 +3,7 @@ layout: post
 title: "B-Tree에 대하여 - 1"
 subtitle: "B-Tree란?"
 date: 2023-06-23 17:40:00+0900
-background: '/img/posts/2023-06-23/B-Tree.png'
+background: '/img/posts/2023/June/B-Tree.png'
 katex: true
 ---
 
