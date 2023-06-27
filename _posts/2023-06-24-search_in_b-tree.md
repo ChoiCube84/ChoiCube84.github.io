@@ -5,6 +5,7 @@ subtitle: "B-Tree에서 키를 찾는 법"
 date: 2023-06-24 22:07:00+0900
 background: '/img/posts/2023/June/B-Tree.png'
 katex: true
+category: Project
 ---
 
 # 블로그에 관하여

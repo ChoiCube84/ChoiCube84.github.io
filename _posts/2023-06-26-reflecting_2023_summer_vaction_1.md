@@ -5,6 +5,7 @@ subtitle: "계절학기의 시작"
 date: 2023-06-26 23:41:00+0900
 background: '/img/posts/2023/June/26/summer.jpg'
 katex: true
+category: Life
 ---
 
 # B-Tree 프로젝트는 어떻게 되었는가?

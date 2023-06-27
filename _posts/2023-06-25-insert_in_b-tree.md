@@ -5,6 +5,7 @@ subtitle: "B-Tree에서 키를 넣는 법"
 date: 2023-06-25 23:58:00+0900
 background: '/img/posts/2023/June/B-Tree.png'
 katex: true
+category: Project
 ---
 
 # 블로그에 관하여

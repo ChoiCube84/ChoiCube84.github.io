@@ -5,6 +5,7 @@ subtitle: "이번 여름방학 첫 개인 프로젝트"
 date: 2023-06-22 23:56:00+0900
 background: '/img/posts/2023/June/B-Tree.png'
 katex: true
+category: Project
 ---
 
 # 블로그에 관하여
