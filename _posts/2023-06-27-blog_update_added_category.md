@@ -2,7 +2,7 @@
 layout: post
 title: "2023년 6월 27일 블로그 업데이트"
 subtitle: "카테고리 추가"
-date: 2023-06-27 12:05:00+0900
+date: 2023-06-27 13:20:00+0900
 background: '/img/posts/blog-update.jpg'
 katex: true
 category: Project
