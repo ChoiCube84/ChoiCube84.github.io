@@ -151,6 +151,3 @@ category: Study
 ## 마무리
 
 최대한 이 계획을 지켜보도록 노력해야겠다. 이번 방학 빡세게 잘 보내고 나면, 2학기는 좀 더 수월하게 해낼 수 있을 것이다. **30일의 전사 출격!!!**
-
-- - -
-<a name="footnote_1">1</a>: <https://en.wikipedia.org/wiki/B-tree>  
