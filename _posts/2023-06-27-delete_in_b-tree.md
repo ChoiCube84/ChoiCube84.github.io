@@ -68,11 +68,11 @@ B-Tree에서 Delete 작업을 수행하는 데에는 2가지의 잘 알려진 �
 
     1. 부모 노드의 separator를 복사하여 요소의 개수가 부족한 노드에 시작 부분에 삽입한다.
 
-    2. 부모 노드의 separtor를 왼쪽 형제 노드의 마지막 원소로 대체한다.
+    2. 부모 노드의 separator를 왼쪽 형제 노드의 마지막 원소로 대체한다.
 
     3. 트리는 균형을 되찾게 된다.
 
-* 양쪽의 형제 노드 모두 최소한의 요소 개수만을 가지고 있다면, then merge with a sibling sandwiching their separator taken off from their parent
+* 양쪽의 형제 노드 모두 최소한의 요소 개수만을 가지고 있다면, separator를 둘러싸는 한 형제 노드와 합친다.
 
     1. separator를 '왼쪽' 노드의 끝에 삽입한다. 이 때 '왼쪽'의 의미는 요소의 개수의 부족한 노드와 그 노드의 왼쪽에 있는 형제 노드 둘 중 어느 것도 될 수 있다.
 
