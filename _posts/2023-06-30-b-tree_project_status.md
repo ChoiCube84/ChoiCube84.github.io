@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "B-Tree 프로젝트 현재 진척 상황"
-subtitle: ""
-date: 2023-06-27 23:58:00+0900
+subtitle: "클래스들에 대한 설명"
+date: 2023-06-30 23:36:00+0900
 background: '/img/posts/2023/June/B-Tree.png'
 katex: true
 category: Project
