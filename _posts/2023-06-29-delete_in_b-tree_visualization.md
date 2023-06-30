@@ -74,6 +74,52 @@ category: Project
 
     <img src="/img/posts/2023/June/29/b-tree_8.png" width="100%" height="100%" alt="B-Tree에서 23 제거 완료">
 
+### 4. B-Tree에서 20, 24 제거
+
+이번에는 이 B-Tree에서 20, 24을 순서대로 제거해보겠다. 우선 20는 리프 노드에 있으므로 바로 제거한다.
+
+<img src="/img/posts/2023/June/29/b-tree_9.png" width="100%" height="100%" alt="리프 노드에서 20이 제거된 B Tree">
+
+다음은 24를 제거해보겠다. 24는 리프 노드에 있으므로 바로 제거한다.
+
+<img src="/img/posts/2023/June/29/b-tree_10.png" width="100%" height="100%" alt="리프 노드에서 24가 제거된 B Tree">
+
+이 때 방금 24가 제거된 내부 노드는 가져야 할 최소 키값의 개수인 1개보다 적은 0개의 키값을 가지고 있다. 따라서 이 트리에서는 리밸런싱을 진행해야 한다.
+
+리밸런싱을 진행하려는 노드는 내부 노드이므로, 왼쪽 subtree의 가장 큰 요소인 21을 새로운 separator로 선택하고, 선택된 그 요소를 원래 있던 리프노드에서 제거한 뒤, 기존의 separator였던 24을 대체한다.
+
+<img src="/img/posts/2023/June/29/b-tree_11.png" width="100%" height="100%" alt="왼쪽 subtree에서 가장 큰 키값 선택">
+
+<img src="/img/posts/2023/June/29/b-tree_12.png" width="100%" height="100%" alt="separator 대체 완료">
+
+이 때, separator를 대체하는 과정에서 한 리프 노드가 가져야 할 최소 개수보다 적은 수의 키값을 가지게 되는 것을 확인할 수 있다. 따라서, 리밸런싱을 진행해주어야 한다.
+
+현재 이 트리에서 리밸런싱을 진행하려는 리프 노드의 양쪽 형제 노드 모두 회전을 진행하게 되면 최소로 가져야할 개수보다 적어지는 상황이다. 따라서 다음과 같은 과정을 따라 리밸런싱을 진행해야 한다.
+
+1. separator인 21을 리프 노드의 끝에 삽입한다.
+
+    <img src="/img/posts/2023/June/29/b-tree_13.png" width="100%" height="100%" alt="리프 노드에서 separator인 21이 삽입된 B Tree">
+
+2. 오른쪽 형제 리프 노드에 있는 모든 원소들을 왼쪽 노드에 삽입한다.
+
+    <img src="/img/posts/2023/June/29/b-tree_14.png" width="100%" height="100%" alt="형제 리프 노드에서 26을 가져옴">
+
+3. 부모 노드의 separator와 함께 오른쪽 리프 노드를 제거한다. 이 때, 부모 노드의 키값이 하나 감소하게 되고, 최소 필요 개수보다 적어지므로 다시 리밸런싱이 일어나야 한다.
+
+    <img src="/img/posts/2023/June/29/b-tree_15.png" width="100%" height="100%" alt="B-Tree에서 24 제거 후 리밸런싱 재필요">
+
+이제 이 부모 노드의 왼쪽 형제 노드에 separator인 18을 삽입한다.
+
+<img src="/img/posts/2023/June/29/b-tree_16.png" width="100%" height="100%" alt="separator 18 삽입">
+
+이제 텅 빈 오른쪽 노드를 왼쪽 노드와 병합한다. 그리고 separator와 합병된 노드를 삭제한다.
+
+<img src="/img/posts/2023/June/29/b-tree_17.png" width="100%" height="100%" alt="노드 병합 후 separator 및 오른쪽 노드 삭제">
+
+이 때, 병합된 노드가 가질 수 있는 최대 키값 개수보다 더 많은 개수의 키값을 가지고 있으므로, 노드 분할을 진행하고, 15를 승격시키면 삭제 작업이 마무리 된다.
+
+<img src="/img/posts/2023/June/29/b-tree_18.png" width="100%" height="100%" alt="24 삭제 작업 완료">
+
 ## 마무리
 
 이로써 B-Tree에 대한 이론적인 설명을 모두 마치도록 하겠다! 내일은 이제까지 작성한 코드들을 리뷰하는 시간을 가져보도록 하겠다. 

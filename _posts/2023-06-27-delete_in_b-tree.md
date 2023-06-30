@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "B-Tree에 대하여 - 4"
-subtitle: "B-Tree에서 키를 뺴는 법"
+subtitle: "B-Tree에서 키를 빼는 법"
 date: 2023-06-27 23:58:00+0900
 background: '/img/posts/2023/June/B-Tree.png'
 katex: true
