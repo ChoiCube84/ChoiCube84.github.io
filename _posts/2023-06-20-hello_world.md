@@ -6,6 +6,7 @@ date: 2023-06-20 23:12:00+0900
 background: '/img/posts/2023/June/20/sprout.jpg'
 katex: true
 category: Life
+tags: [ vacation ]
 ---
 
 # Hello World!

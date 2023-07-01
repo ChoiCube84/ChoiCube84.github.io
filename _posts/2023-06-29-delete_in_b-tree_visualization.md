@@ -6,6 +6,7 @@ date: 2023-06-29 23:58:00+0900
 background: '/img/posts/2023/June/B-Tree.png'
 katex: true
 category: Project
+tags: [ b-tree ]
 ---
 
 # B-Tree 프로젝트

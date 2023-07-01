@@ -2,6 +2,8 @@
 layout: page
 ---
 
+{% include tag.html %}
+
 {% assign category = page.category | default: page.title %}
 
 {% for post in site.categories[category] %}

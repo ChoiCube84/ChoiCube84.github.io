@@ -6,6 +6,7 @@ date: 2023-06-27 14:14:00+0900
 background: '/img/posts/2023/June/27/warrior.jpg'
 katex: true
 category: Study
+tags: [ discrete_math ]
 ---
 
 # 2023년 2학기 대비 공부 프로젝트

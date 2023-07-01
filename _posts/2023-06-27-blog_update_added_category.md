@@ -6,6 +6,7 @@ date: 2023-06-27 13:20:00+0900
 background: '/img/posts/blog-update.jpg'
 katex: true
 category: Project
+tags: [ blog ]
 ---
 
 # 블로그 업데이트

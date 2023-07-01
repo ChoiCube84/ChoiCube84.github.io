@@ -6,6 +6,7 @@ date: 2023-06-26 23:41:00+0900
 background: '/img/posts/2023/June/26/summer.jpg'
 katex: true
 category: Life
+tags: [ vacation ]
 ---
 
 # B-Tree 프로젝트는 어떻게 되었는가?

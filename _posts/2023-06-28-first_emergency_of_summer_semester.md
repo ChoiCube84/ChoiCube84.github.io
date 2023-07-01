@@ -6,6 +6,7 @@ date: 2023-06-28 23:32:00+0900
 background: '/img/posts/2023/June/28/slacking.jpg'
 katex: true
 category: Life
+tags: [ vacation ]
 ---
 
 ~~라이더~~
