@@ -35,56 +35,17 @@ tags: [ b-tree ]
 
 1. BNode 생성자 기능 분리: 기존의 코드에서는 하나의 생성자가 일반적인 BNode를 생성하는 역할과, 루트 노드가 분할될 때 새로이 만들어져야 하는 루트 노드를 생성하는 역할을 동시에 수행했으나, 이를 새로운 생성자를 만들어 분리하였다. 
 
-	<details>
-	<summary>기존 코드</summary>
-		 
-		BNode(size_t order, bool isLeaf = false, T* key = nullptr, BNode* first = nullptr, BNode* second = nullptr) : keys(new BKeyList<T>(order)), order(order), isLeaf(isLeaf)
-		{
-			if (isLeaf) {
-				children = nullptr;
-				std::cout << "B Node was made: This is leaf node" << std::endl;
-			}
-			else {
-				children = new BNode*[order + 1];
-				children[0] = first;
-				children[1] = second;
+	기존 코드: 
 
-				for (int i = 2; i < order + 1; i++) {
-					children[i] = nullptr;
-				}
-
-				keys->insert(*key);
-
-				std::cout << "B Node was made" << std::endl;
-			}
+	```C++ 
+	BNode(size_t order, bool isLeaf = false, T* key = nullptr, BNode* first = nullptr, BNode* second = nullptr) : keys(new BKeyList<T>(order)), order(order), isLeaf(isLeaf)
+	{
+		if (isLeaf) {
+			children = nullptr;
+			std::cout << "B Node was made: This is leaf node" << std::endl;
 		}
-
-	</details>
-
-	<details>
-	<summary>새 코드</summary>
-
-		// Basic constructor of BNode
-		BNode(size_t order, bool isLeaf = false) : keys(new BKeyList<T>(order)), order(order), isLeaf(isLeaf)
-		{
-			if (isLeaf) {
-				children = nullptr;
-				std::cout << "B Node was made: This is leaf node" << std::endl;
-			}
-			else {
-				children = new BNode*[order + 1];
-				for (int i = 0; i < order + 1; i++) {
-					children[i] = nullptr;
-				}
-				std::cout << "B Node was made" << std::endl;
-			}
-		}
-
-		// Constructor of BNode for making a new root node
-		BNode(size_t order, BNode* first, BNode* second) : keys(new BKeyList<T>(order)), order(order), isLeaf(false)
-		{
-			children = new BNode * [order + 1];
-
+		else {
+			children = new BNode*[order + 1];
 			children[0] = first;
 			children[1] = second;
 
@@ -92,129 +53,161 @@ tags: [ b-tree ]
 				children[i] = nullptr;
 			}
 
-			std::cout << "New root B Node was made" << std::endl;
+			keys->insert(*key);
+
+			std::cout << "B Node was made" << std::endl;
+		}
+	}
+	```
+
+	새 코드:
+
+	```C++ 
+	// Basic constructor of BNode
+	BNode(size_t order, bool isLeaf = false) : keys(new BKeyList<T>(order)), order(order), isLeaf(isLeaf)
+	{
+		if (isLeaf) {
+			children = nullptr;
+			std::cout << "B Node was made: This is leaf node" << std::endl;
+		}
+		else {
+			children = new BNode*[order + 1];
+			for (int i = 0; i < order + 1; i++) {
+				children[i] = nullptr;
+			}
+			std::cout << "B Node was made" << std::endl;
+		}
+	}
+
+	// Constructor of BNode for making a new root node
+	BNode(size_t order, BNode* first, BNode* second) : keys(new BKeyList<T>(order)), order(order), isLeaf(false)
+	{
+		children = new BNode * [order + 1];
+
+		children[0] = first;
+		children[1] = second;
+
+		for (int i = 2; i < order + 1; i++) {
+			children[i] = nullptr;
 		}
 
-	</details>
+		std::cout << "New root B Node was made" << std::endl;
+	}
+	```
 
 2. split 함수 수정: 기존의 split 함수에서는 이 노드가 분할이 필요한지 확인했으나, 그것을 확인하는 것은 이 함수를 호출하는 곳에서 책임을 져야한다고 판단했고, 그래서 확인하지 않고 바로 분할을 진행하도록 수정하였다. 또한, 이 클래스에서만 split 함수를 호출할 수 있도록 접근 지정자를 private으로 변경하였다. 또한, 분할 과정에서 새로이 생성되는 tail 노드가 자식 노드들을 제대로 연결 받도록 설정하였다.
 
-	<details>
-	<summary>기존 코드</summary>
-		 
-		BNode* split() {
-			if (keys->getCurrentSize() < order) return nullptr;
-			else {
-				BNode* tail = new BNode(order, keys->split(), isLeaf);
-
-				currentSize = order / 2;
-
-				for (int i = order / 2 + 1; i < order; i++) {
-					tail->children[i] = 
-				}
-
-				return tail;
-			}
-		}
-
-	</details>
-
-	<details>
-	<summary>새 코드</summary>
-
-		BNode* split() {
+	기존 코드:
+		
+	```C++
+	BNode* split() {
+		if (keys->getCurrentSize() < order) return nullptr;
+		else {
 			BNode* tail = new BNode(order, keys->split(), isLeaf);
 
 			currentSize = order / 2;
 
 			for (int i = order / 2 + 1; i < order; i++) {
-				tail->children[i - (order / 2 + 1)] = children[i];
-				children[i] = nullptr;
+				tail->children[i] = 
 			}
 
 			return tail;
 		}
+	}
+	```
 
-	</details>
+	새 코드: 
+
+	```C++ 
+	BNode* split() {
+		BNode* tail = new BNode(order, keys->split(), isLeaf);
+
+		currentSize = order / 2;
+
+		for (int i = order / 2 + 1; i < order; i++) {
+			tail->children[i - (order / 2 + 1)] = children[i];
+			children[i] = nullptr;
+		}
+
+		return tail;
+	}
+	```
 
 
 3. insert 함수 수정: 기존의 insert 함수는 이후 노드에서 분할을 진행해야하는지 확인하기 위해 bool 자료형의 값을 반환했으나, BKeyList에서 노드가 분할되어야 하는지 여부를 확인하는 방식이 바뀌어 더 이상 그러한 값을 반환할 필요가 없어져, 아무런 값도 리턴하지 않게 수정하였다. 또한, 바뀐 BKeyList의 함수에 맞추어 코드를 수정하였다.
 
-	<details>
-	<summary>기존 코드</summary>
+	기존 코드: 
 		 
-		bool insert(const T& key) {
-			// std::cout << "Not Implemented yet" << std::endl;
-			// return false;
+	```C++ 
+	bool insert(const T& key) {
+		// std::cout << "Not Implemented yet" << std::endl;
+		// return false;
 
-			int index = keys->findIndex(key);
-			bool splitRequired = false;
+		int index = keys->findIndex(key);
+		bool splitRequired = false;
 
-			BNode* child = nullptr;
+		BNode* child = nullptr;
 
-			if (isLeaf) {
-				splitRequired = keys->insert(key);
-			}
-			else {
-				child = children[index];
-				splitRequired = child->insert(key);
-			}
-
-			if (splitRequired) {
-				if (isLeaf) {
-					return true;
-				}
-				else {
-					T promoted = child->keys[order / 2];
-					
-					int index = keys->findIndex(promoted);
-					splitRequired = keys->insert(promoted); // We should return this value
-					BKeyList<T>* temp = keys->split();
-
-					for (int i = keys->getCurrentSize(); i > index + 1; i--) {
-						children[i] = children[i - 1];
-					}
-					children[index + 1] = temp;
-					return splitRequired;
-				}
-			}
-			else {
-				return false;
-			}
+		if (isLeaf) {
+			splitRequired = keys->insert(key);
+		}
+		else {
+			child = children[index];
+			splitRequired = child->insert(key);
 		}
 
-	</details>
-
-	<details>
-	<summary>새 코드</summary>
-
-		void insert(const T& key) {
-			// std::cout << "Not Implemented yet" << std::endl;
-			// return false;
-
-			size_t index = keys->findIndex(key);
-			
-			BNode* child = nullptr;
-
+		if (splitRequired) {
 			if (isLeaf) {
-				keys->insert(key);
+				return true;
 			}
 			else {
-				child = children[index];
-				child->insert(key);
-			}
+				T promoted = child->keys[order / 2];
+				
+				int index = keys->findIndex(promoted);
+				splitRequired = keys->insert(promoted); // We should return this value
+				BKeyList<T>* temp = keys->split();
 
-			bool splitRequired = keys->splitRequired();
-
-			if (splitRequired) {
-				// Should determine if this is root node or not
-				// Split the node
-				// If this is root node, make new root node
+				for (int i = keys->getCurrentSize(); i > index + 1; i--) {
+					children[i] = children[i - 1];
+				}
+				children[index + 1] = temp;
+				return splitRequired;
 			}
 		}
+		else {
+			return false;
+		}
+	}
+	```
 
-	</details>
+	새 코드: 
 
+	```C++ 
+	void insert(const T& key) {
+		// std::cout << "Not Implemented yet" << std::endl;
+		// return false;
+
+		size_t index = keys->findIndex(key);
+		
+		BNode* child = nullptr;
+
+		if (isLeaf) {
+			keys->insert(key);
+		}
+		else {
+			child = children[index];
+			child->insert(key);
+		}
+
+		bool splitRequired = keys->splitRequired();
+
+		if (splitRequired) {
+			// Should determine if this is root node or not
+			// Split the node
+			// If this is root node, make new root node
+		}
+	}
+	```
 
 ## 마무리
 
