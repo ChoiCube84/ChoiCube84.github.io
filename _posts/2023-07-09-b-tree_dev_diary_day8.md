@@ -43,7 +43,7 @@ tags: [ b-tree ]
 
 	새 코드:
 
-	```C++
+	```cpp
 	// TODO: Reconsider using this function
 	void replaceKeyByIndex(const T& newKey, size_t index) {
 		keys[index] = newKey;
@@ -54,7 +54,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     BNode* getLeftMostLeafNode(void) {
 		if (isLeaf) {
 			return this;
@@ -106,7 +106,7 @@ tags: [ b-tree ]
 
 	새 코드:
 
-	```C++
+	```cpp
 	// TODO: Implement this function to make sure it deletes from leaf node
 	bool remove(const T& key) {
 		bool deletionResult = false;
