@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "계절학기 시작 후 첫 번째 비상사태"
+title: "2023년 여름학기 첫 번째 비상사태"
 subtitle: "계획은 하나도 못지키고 있는 절체절명의 위기! 이대로 가면..."
 date: 2023-06-28 23:32:00+0900
 background: '/img/posts/2023/June/28/slacking.jpg'
