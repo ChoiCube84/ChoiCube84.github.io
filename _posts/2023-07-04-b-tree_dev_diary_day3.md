@@ -23,7 +23,7 @@ tags: [ b-tree ]
 
 	기존 코드: 
 
-    ```C++ 
+    ```cpp 
     BKeyList<T>* keys; // A pointer that points to a BKeyList holding the keys of this node
     BNode** children;  // An array of pointers that point to each child node
     size_t order;	   // The order of this B-Tree
@@ -32,7 +32,7 @@ tags: [ b-tree ]
 
 	새 코드:
 
-	```C++ 
+	```cpp 
 	BKeyList<T>* keys; // A pointer that points to a BKeyList holding the keys of this node
 	BNode* parent;	   // A pointer that points to the parent node
 	BNode** children;  // An array of pointers that point to each child node
@@ -44,7 +44,7 @@ tags: [ b-tree ]
 
 	기존 코드:
 		
-	```C++
+	```cpp
 	void insert(const T& key) {
 		// std::cout << "Not Implemented yet" << std::endl;
 		// return false;
@@ -73,7 +73,7 @@ tags: [ b-tree ]
 
 	새 코드: 
 
-	```C++ 
+	```cpp 
 	void insert(const T& key) {
 		// std::cout << "Not Implemented yet" << std::endl;
 		// return false;

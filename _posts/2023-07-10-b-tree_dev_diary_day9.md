@@ -19,7 +19,7 @@ tags: [ b-tree ]
 
     기존 코드:
 
-    ```C++
+    ```cpp
     void preOrder(std::stringstream& ss) {
 		BNode* child = nullptr;
 
@@ -70,7 +70,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     void preOrder(std::stringstream& ss, bool useBrackets = false) {
 		BNode* child = nullptr;
 
@@ -136,7 +136,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     bool isDeficientNode(void) {
 		size_t numberOfChildrenNodes = keys->getCurrentSize() + 1;
 		size_t minimumNumberOfRequiredKeys = (order + 1) / 2;
@@ -156,7 +156,7 @@ tags: [ b-tree ]
 
     기존 코드:
     
-    ```C++
+    ```cpp
     // TODO: Implement this function to make sure it deletes from leaf node
 	bool remove(const T& key) {
 		bool deletionResult = false;
@@ -197,7 +197,7 @@ tags: [ b-tree ]
     
     새 코드:
     
-    ```C++
+    ```cpp
     // TODO: Implement this function to make sure it deletes from leaf node
 	bool remove(const T& key) {
 		bool deletionResult = false;
@@ -240,7 +240,7 @@ tags: [ b-tree ]
 
     기존 코드:
 
-    ```C++
+    ```cpp
     void rebalance(void) {
 		std::cout << "Not implemented yet" << std::endl;
 	}
@@ -248,7 +248,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     void rebalance(void) {
 		BNode* leftSibling = getLeftSibling();
 		BNode* rightSibling = getRightSibling();

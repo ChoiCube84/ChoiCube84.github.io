@@ -37,7 +37,7 @@ tags: [ b-tree ]
 
 	기존 코드: 
 
-	```C++ 
+	```cpp 
 	BNode(size_t order, bool isLeaf = false, T* key = nullptr, BNode* first = nullptr, BNode* second = nullptr) : keys(new BKeyList<T>(order)), order(order), isLeaf(isLeaf)
 	{
 		if (isLeaf) {
@@ -62,7 +62,7 @@ tags: [ b-tree ]
 
 	새 코드:
 
-	```C++ 
+	```cpp 
 	// Basic constructor of BNode
 	BNode(size_t order, bool isLeaf = false) : keys(new BKeyList<T>(order)), order(order), isLeaf(isLeaf)
 	{
@@ -99,7 +99,7 @@ tags: [ b-tree ]
 
 	기존 코드:
 		
-	```C++
+	```cpp
 	BNode* split() {
 		if (keys->getCurrentSize() < order) return nullptr;
 		else {
@@ -118,7 +118,7 @@ tags: [ b-tree ]
 
 	새 코드: 
 
-	```C++ 
+	```cpp 
 	BNode* split() {
 		BNode* tail = new BNode(order, keys->split(), isLeaf);
 
@@ -138,7 +138,7 @@ tags: [ b-tree ]
 
 	기존 코드: 
 		 
-	```C++ 
+	```cpp 
 	bool insert(const T& key) {
 		// std::cout << "Not Implemented yet" << std::endl;
 		// return false;
@@ -182,7 +182,7 @@ tags: [ b-tree ]
 
 	새 코드: 
 
-	```C++ 
+	```cpp 
 	void insert(const T& key) {
 		// std::cout << "Not Implemented yet" << std::endl;
 		// return false;

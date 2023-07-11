@@ -21,7 +21,7 @@ tags: [ b-tree ]
 
 	기존 코드: 
 
-    ```C++ 
+    ```cpp 
     void insert(const T& key) {
 		// std::cout << "Not Implemented yet" << std::endl;
 		// return false;
@@ -64,7 +64,7 @@ tags: [ b-tree ]
 
 	새 코드:
 
-	```C++ 
+	```cpp 
 	void insert(const T& key) {
 		// std::cout << "Not Implemented yet" << std::endl;
 		// return false;
@@ -107,7 +107,7 @@ tags: [ b-tree ]
 
 	새 코드: 
 
-	```C++ 
+	```cpp 
 	std::string preOrder() {
 		std::stringstream ss;
 		BNode* child = nullptr;

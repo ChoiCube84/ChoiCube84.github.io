@@ -27,7 +27,7 @@ tags: [ b-tree ]
 
 	기존 코드: 
 
-    ```C++ 
+    ```cpp 
     void insert(const T& key) {
 		// std::cout << "Not Implemented yet" << std::endl;
 		// return false;
@@ -68,7 +68,7 @@ tags: [ b-tree ]
 
 	새 코드:
 
-	```C++ 
+	```cpp 
 	void insert(const T& key) {
 		size_t index = keys->findIndex(key);
 		BNode* child = nullptr;
@@ -103,7 +103,7 @@ tags: [ b-tree ]
 
 	새 코드: 
 
-	```C++ 
+	```cpp 
 	#include <iostream>
     #include <vector>
 

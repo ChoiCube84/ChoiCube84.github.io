@@ -19,7 +19,7 @@ tags: [ b-tree ]
 
     기존 코드:
 
-    ```C++
+    ```cpp
     BKeyList<T>* keys;
 	BNode* parent;
 	BNode** children;
@@ -29,7 +29,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     size_t order;
 	size_t childIndex;
 	bool isLeaf;
@@ -42,13 +42,13 @@ tags: [ b-tree ]
 
     기존 코드:
 
-    ```C++
+    ```cpp
     void setChildByIndex(BNode* child, size_t idx) { children[idx] = child; }
     ```
 
     새 코드:
 
-    ```C++
+    ```cpp
     void setChildByIndex(BNode* child, size_t idx) { 
 		if (child != nullptr) {
 			child->childIndex = idx;
@@ -62,7 +62,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     BNode* getLeftSibling(void) {
 		if (childIndex == 0) {
 			return nullptr;
@@ -85,7 +85,7 @@ tags: [ b-tree ]
 
     기존 코드:
 
-    ```C++
+    ```cpp
     void remove() {
 		std::cout << "Not Implemented yet" << std::endl;
 	}
@@ -93,7 +93,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     bool remove(const T& key) {
 		if (isLeaf) {
 			bool deletionSuccess = keys->remove(key);

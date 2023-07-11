@@ -19,7 +19,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     void rebalance(void) {
 		std::cout << "Not implemented yet" << std::endl;
 	}
@@ -29,7 +29,7 @@ tags: [ b-tree ]
 
     새 코드:
 
-    ```C++
+    ```cpp
     const T& getSmallestKey(void) const {
 		return keys[0];
 	}
@@ -88,7 +88,7 @@ tags: [ b-tree ]
 
 	기존 코드:
 
-	```C++
+	```cpp
 	bool remove(const T& key) {
 		if (isLeaf) {
 			bool deletionSuccess = keys->remove(key);
