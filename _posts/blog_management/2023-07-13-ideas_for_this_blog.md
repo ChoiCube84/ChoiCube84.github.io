@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "블로그 업데이트 아이디어 모음"
-subtitle: "퍄도파도 끝이 없는 블로그"
+subtitle: "파도파도 끝이 없는 블로그"
 date: 2023-07-13 23:47:00+0900
 background: '/img/posts/blog-update.jpg'
 katex: true
