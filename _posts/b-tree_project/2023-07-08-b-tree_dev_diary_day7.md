@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "B-Tree 프로젝트 개발일지 7일차"
-subtitle: "BNode 클래스"
+subtitle: "BNode 클래스 - Delete"
 date: 2023-07-08 23:58:00+0900
 background: '/img/posts/2023/July/B-Tree.png'
 katex: true
