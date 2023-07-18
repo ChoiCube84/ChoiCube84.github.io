@@ -307,7 +307,7 @@ tags: [ b-tree ]
 		postOrderHelper(ss, root, useBrackets);
 		return ss.str();
 	}
-    
+
     void traverseChildNode(
 		std::stringstream& ss, 
 		std::function<void(std::stringstream&, BNode<T>*, bool)> orderType,
@@ -387,6 +387,54 @@ tags: [ b-tree ]
     ```
 
 ### test.cpp 파일
+
+1. `RandomBTreeTest` 함수 추가:
+
+    랜덤으로 요소들을 B-Tree에 넣고 삭제하는 과정을 거치면서 다양한 테스트케이스에서 제대로 동작하는지 확인할 수 있는 함수를 만들었다.
+
+    새 코드:
+    ```cpp
+    void RandomBTreeTest(void) {
+        unsigned int success = 0;
+
+        std::random_device rd;
+        std::mt19937 gen(rd());
+
+        std::uniform_int_distribution<int> randomOrder(3, 7);
+        std::uniform_int_distribution<int> randomKey(0, 9999);
+
+        vector<int> keys;
+
+        while (1) {
+            size_t order = static_cast<size_t>(randomOrder(gen));
+            BTree<int>* tree = new BTree<int>(order);
+
+            for (size_t i = 0; i < pow(order, 3); i++) {
+                int key = randomKey(gen);
+                keys.emplace_back(key);
+            }
+
+            for (auto i : keys) {
+                insertAndPrint(tree, i);
+                // tree->insert(i);
+            }
+
+            random_shuffle(keys.begin(), keys.end());
+
+            for (auto i : keys) {
+                deleteAndPrint(tree, i);
+                // tree->remove(i);
+            }
+
+            keys.clear();
+            success++;
+
+            cout << "Test " << success << "success! (order: " << order << ")" << endl;
+
+            delete tree;
+        }
+    }
+    ```
 
 ## 마무리
 
