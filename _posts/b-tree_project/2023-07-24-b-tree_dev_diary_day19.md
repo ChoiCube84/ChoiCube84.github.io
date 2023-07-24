@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "B-Tree 프로젝트 개발일지 18일차"
+title: "B-Tree 프로젝트 개발일지 19일차"
 subtitle: "Debugging"
-date: 2023-07-20 23:44:00+0900
+date: 2023-07-24 23:59:00+0900
 background: '/img/posts/2023/July/B-Tree.png'
 katex: true
 category: Project
@@ -136,62 +136,19 @@ tags: [ b-tree ]
 	}
 	```
 
-2. `BNode::rebalance` 함수 수정:
+2. test.cpp 파일 수정:
 
-    리프 노드가 아닌 경우의 노드에서 리밸런싱을 진행할 때의 조건을 따로 둘 필요가 없이 leftRotation 함수와 rightRotation 함수에서 경우에 따라 올바르게 처리하도록 코드를 짜는게 맞다고 생각하여 원래대로 코드를 돌렸다.
-
-    기존 코드:
-    ```cpp
-	void rebalance(void) {
-		BNode* leftSibling = getLeftSibling();
-		BNode* rightSibling = getRightSibling();
-
-		// TODO: Check if checking if it is leaf node is neccessary
-
-		if (!isLeaf && isEmpty()) {
-			mergeWithSiblingNode();
-		}
-		else if (leftSibling != nullptr && leftSibling->isExceedingNode()) {
-			rightRotation();
-		}
-		else if (rightSibling != nullptr && rightSibling->isExceedingNode()) {
-			leftRotation();
-		}
-		else {
-			mergeWithSiblingNode();
-		}
-	}
-    ```
-
-    새 코드:
-    ```cpp
-    void rebalance(void) {
-		BNode* leftSibling = getLeftSibling();
-		BNode* rightSibling = getRightSibling();
-
-        if (leftSibling != nullptr && leftSibling->isExceedingNode()) {
-			rightRotation();
-		}
-		else if (rightSibling != nullptr && rightSibling->isExceedingNode()) {
-			leftRotation();
-		}
-		else {
-			mergeWithSiblingNode();
-		}
-	}
-    ```
+    다양한 테스트 케이스와 상황을 두고 테스트를 진행해야 했기 때문에 여러 번의 수정이 있었다. 더 이상 필요하지 않은 함수들을 삭제하거나, 출력 여부를 인자로 받도록 코드를 수정하거나, 테스트 케이스를 변경하는 등의 수정이 발생하였다.
+	
+	B-Tree 구현에서 핵심적인 함수라기 보다는 테스트를 위한 주변 함수들이라고 판단되어 굳이 기존 코드와 새 코드를 이 글에 넣어두지는 않겠다. 궁금한 사람은 앞서 이야기한 내 깃헙 레포지토리의 커밋 기록을 참고하면 될 것이다.
 
 ## 마무리
 
-오늘은 안타깝게도 디버깅 결과 해결된 버그가 없었다. 함수에서 어떤 동작을 제대로 수행하지 않는지는 알아내어 다행히 이에 대한 코드는 수정할 수 있었으나, 여전히 마지막으로 발견된 버그가 해결된 것은 아니다.
+오늘로 B-Tree의 프로젝트에서 꼭 필요한 기능은 모두 구현한 것 같다. 여러 번의 테스트를 거쳐도 무사히 통과한 것을 확인할 수 있었기 때문이다.
 
-원래대로라면 오늘 B-Tree 프로젝트를 완결짓고 싶었다. 계절학기 수업이 오늘로 종강이고, 내일 2박 3일로 여행을 다녀오기 때문에, 몇 가지 부가기능들이 완성되지는 않았지만 다른 방학에 진행하는 것으로 한 뒤 필수 기능은 완결을 짓고 다른 프로젝트로 넘어가고 싶었다.
+슬슬 프로젝트에도 마침표를 찍을 시간이 다가오고 있다. 가능하다면 내일 안에 이 프로젝트를 끝내고자 한다. 앞으로 진행하고 싶은 다양한 다른 활동들도 있고, 방학도 거의 끝나가기 때문이다.
 
-하지만 오늘 버그를 해결하지 못했기 때문에 그러기는 어려울 것 같다. 또한, 여행 동안에는 개발일지는 물론이고 코딩도 하지 않을 계획이다. 모처럼의 여행에서까지 이런 일을 하고 싶지는 않기 때문이다.
-
-잔디심기 기록이 깨지기는 하지만, 여행을 간 날까지 잔디심기가 되어있는건 말이 안된다고 생각한다. 말이 나온김에 내가 잔디심기를 하는 이유를 간단하게 말하자면, 잔디심기를 활동을 통해 조금씩이라도 프로그래밍 활동을 해야한다는 모종의 압력을 스스로에게 가하기 위함이였다. 여행 기간에도 잔디심기를 하는건 내가 처음 잔디심기를 시작한 근본적인 의도에 맞지 않는다. 기회가 되면 잔디심기에 대한 내 생각에 대한 내용은 따로 자세히 다루어보겠다.
-
-여행을 다녀와서의 계획을 간단하게 정리하자면, 앞서 언급한 대로 부가기능은 배제하고 필수 기능을 완성한 뒤 이번 방학 기간의 B-Tree 프로젝트는 완결을 지으려고 한다. 하고 싶은 다양한 프로젝트와 공부가 있고, 솔직히 좀 지겹기 때문이다. 무슨 활동을 하게 될지 미리 이야기 하자면, 양자 컴퓨팅에 대한 공부와 이와는 별개로 게임을 하나 만들어보고 싶다.
+내일 할 일은 현재 함수들이 복잡하게 되어있어 읽기 힘든 부분들이 많은데, 이런 부분들을 리팩토링 등을 진행하여 가독성을 높이는 작업을 진행할 것이다. 추가로 시간이 된다면 간단한 부가 기능을 추가할 예정이다.
 
 오늘의 개발은 여기까지!
 
