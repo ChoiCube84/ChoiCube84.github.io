@@ -11,23 +11,51 @@ tags: [ b-tree ]
 
 # B-Tree 프로젝트
 
-여행도 끝났으니 오늘 B-Tree 프로젝트에서 추가로 개발하고 수정한 사항들을 정리하겠다. 오늘의 개발일지에서는 BNode 클래스에서의 코드의 변경사항들을 다룰 것이다. 다른 클래스들의 코드나 최신 코드를 보고 싶다면 이 깃헙 레포지토리<sup>[1](#footnote_1)</sup>를 참고하면 된다.
+오늘도 B-Tree 프로젝트에서 추가로 개발하고 수정한 사항들을 정리하겠다. 오늘의 개발일지에서는 BNode 클래스에서의 코드의 변경사항들을 다룰 것이다. 다른 클래스들의 코드나 최신 코드를 보고 싶다면 이 깃헙 레포지토리<sup>[1](#footnote_1)</sup>를 참고하면 된다.
 
 ## 수정사항
 
 1. `BNode::leftRotation`, `BNode::rightRotation` 함수 수정:
 
-	테스트를 진행하면서 얻어낸 데이터들을 기반으로 이 두 함수에 숨어있던 버그를 발견하였고, 이를 수정하였다.
-
-	`BNode::leftRotation` 함수의 경우, rightSibling이 가지고 있는 새로운 separator를 너무 일찍 삭제하는 바람에 자식의 마지막 인덱스에 제대로 접근하지 못하는 문제점이 있었고 이를 수정하였다.
-
-	`BNode::rightRotation` 함수의 경우, 함수가 실행된 노드에서의 요소로 작업해야 하는 코드에서 실수로 leftSibling에서 동작을 수행하도록 코드를 짠 부분이 있었다. 이 부분을 고쳤더니 정상적으로 작동하게 되었다.
+	리프 노드에서 리밸런싱이 진행 된 후 부모 노드가 부족한 노드가 되는 경우 부모 노드에서 리밸런싱이 이루어지는데, 왼쪽으로 회전시키는 함수와 오른쪽으로 회전시키는 함수에서 자식 노드를 이동시키는 코드를 추가하였다.
 
 	기존 코드
 	```cpp
 	void leftRotation(void) {
 		size_t separatorIndex = childIndex;
 		T oldSeparator = parent->keys->getKeyByIndex(separatorIndex);
+
+		keys->insert(oldSeparator);
+
+		BNode* rightSibling = getRightSibling();
+		T newSeparator = rightSibling->keys->getSmallestKey();
+		rightSibling->keys->remove(newSeparator);
+		
+		parent->keys->remove(oldSeparator);
+		parent->keys->insert(newSeparator);
+	}
+
+	void rightRotation(void) {
+		size_t separatorIndex = childIndex - 1;
+		T oldSeparator = parent->keys->getKeyByIndex(separatorIndex);
+
+		keys->insert(oldSeparator);
+
+		BNode* leftSibling = getLeftSibling();
+		T newSeparator = leftSibling->keys->getLargestKey();
+		leftSibling->keys->remove(newSeparator);
+
+		parent->keys->remove(oldSeparator);
+		parent->keys->insert(newSeparator);
+	}
+	```
+
+	새 코드:
+	```cpp
+	void leftRotation(void) {
+		size_t separatorIndex = childIndex;
+		T oldSeparator = parent->keys->getKeyByIndex(separatorIndex);
+
 		keys->insert(oldSeparator);
 
 		BNode* rightSibling = getRightSibling();
@@ -43,7 +71,7 @@ tags: [ b-tree ]
 			}
 			rightSibling->setChildByIndex(nullptr, rightSibling->getCurrentSize()); // TODO: Check if this line is neccessary
 		}
-
+		
 		parent->keys->remove(oldSeparator);
 		parent->keys->insert(newSeparator);
 	}
@@ -51,6 +79,7 @@ tags: [ b-tree ]
 	void rightRotation(void) {
 		size_t separatorIndex = childIndex - 1;
 		T oldSeparator = parent->keys->getKeyByIndex(separatorIndex);
+
 		keys->insert(oldSeparator);
 
 		BNode* leftSibling = getLeftSibling();
@@ -67,8 +96,6 @@ tags: [ b-tree ]
 			// Added these two lines because of range of size_t
 			BNode* childToShift = leftSibling->getChildByIndex(0);
 			leftSibling->setChildByIndex(childToShift, 1);
-			BNode* childToShift = getChildByIndex(0);
-			setChildByIndex(childToShift, 1);
 
 			setChildByIndex(rightMostChildOfLeftSibling, 0);
 			leftSibling->setChildByIndex(nullptr, leftSibling->getCurrentSize()); // TODO: Check if this line is neccessary
@@ -76,63 +103,6 @@ tags: [ b-tree ]
 
 		parent->keys->remove(oldSeparator);
 		parent->keys->insert(newSeparator);
-	}
-	```
-
-	새 코드:
-	```cpp
-	void leftRotation(void) {
-		size_t separatorIndex = childIndex;
-		T oldSeparator = parent->keys->getKeyByIndex(separatorIndex);
-		keys->insert(oldSeparator);
-
-		BNode* rightSibling = getRightSibling();
-		T newSeparator = rightSibling->keys->getSmallestKey();
-
-		if (!isLeaf) {
-			BNode* leftMostChildOfRightSibling = rightSibling->getLeftMostChild();
-			setChildByIndex(leftMostChildOfRightSibling, getCurrentSize());
-			
-			for (size_t i = 0; i < rightSibling->getCurrentSize(); i++) {
-				BNode* childToShift = rightSibling->getChildByIndex(i + 1);
-				rightSibling->setChildByIndex(childToShift, i);
-			}
-			rightSibling->setChildByIndex(nullptr, rightSibling->getCurrentSize()); // TODO: Check if this line is neccessary
-		}
-
-		parent->keys->remove(oldSeparator);
-		parent->keys->insert(newSeparator);
-
-		rightSibling->keys->remove(newSeparator);
-	}
-
-	void rightRotation(void) {
-		size_t separatorIndex = childIndex - 1;
-		T oldSeparator = parent->keys->getKeyByIndex(separatorIndex);
-		keys->insert(oldSeparator);
-
-		BNode* leftSibling = getLeftSibling();
-		T newSeparator = leftSibling->keys->getLargestKey();
-
-		if (!isLeaf) {
-			BNode* rightMostChildOfLeftSibling = leftSibling->getRightMostChild();
-			for (size_t i = getCurrentSize() - 1; i > 0; i--) {
-				BNode* childToShift = getChildByIndex(i);
-				setChildByIndex(childToShift, i + 1);
-			}
-
-			// Added these two lines because of range of size_t
-			BNode* childToShift = getChildByIndex(0);
-			setChildByIndex(childToShift, 1);
-
-			setChildByIndex(rightMostChildOfLeftSibling, 0);
-			leftSibling->setChildByIndex(nullptr, leftSibling->getCurrentSize()); // TODO: Check if this line is neccessary
-		}
-
-		parent->keys->remove(oldSeparator);
-		parent->keys->insert(newSeparator);
-
-		leftSibling->keys->remove(newSeparator);
 	}
 	```
 
