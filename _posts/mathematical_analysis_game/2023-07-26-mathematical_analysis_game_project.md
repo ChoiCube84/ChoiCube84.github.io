@@ -2,7 +2,7 @@
 layout: post
 title: "해석학 게임 만들기 프로젝트"
 subtitle: "프로젝트 소개"
-date: 2023-07-26 23:58:00+0900
+date: 2023-07-26 02:23:00+0900
 background: '/img/posts/2023/July/mathematical_analysis.jpg'
 katex: true
 category: Project
