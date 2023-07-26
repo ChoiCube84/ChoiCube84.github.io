@@ -2,7 +2,7 @@
 layout: post
 title: "해석학 게임 만들기 프로젝트 - 1일차"
 subtitle: "해석학 공부하기"
-date: 2023-07-26 02:23:00+0900
+date: 2023-07-26 23:59:00+0900
 background: '/img/posts/2023/July/mathematical_analysis.jpg'
 katex: true
 category: Study
@@ -179,9 +179,59 @@ $E$의 *greatest lower bound* 또는 *infimum* 도 같은 방식으로 정의된
 
 **1.11 Theorem**
 
-$S$가 least-upper-bound-property를 지닌 ordered set이라고 가정하자. $B\subset S$이고, $B$가 공집합이 아니며, $B$가 bounded below 되어있다면, 
+$S$가 least-upper-bound-property를 지닌 ordered set이라고 가정하자. $B\subset S$이고, $B$가 공집합이 아니며, $B$가 bounded below 되어있다고 하자. $L$이 $B$의 lower bound들을 모두 모아놓은 집합이라고 하자. 그렇다면,  
+\\[\alpha = \sup L\\]
 
-(작성중)
+이 $S$에 존재하며, $\alpha = \inf B$이다. 달리 말하면, $\inf B$는 $S$에 존재한다.
 
-- - -
-<a name="footnote_1">1</a>: 
+해설: 이 Theorem이 말하고자 하는 것은 *least-upper-bound-property*를 가진다는 것은, 동시에 *greatest-lower-bound-property*를 가진다는 것을 의미한다는 것이다. 그걸 동시에 가진다는게 말이나 되나 싶을 수 있지만, 놀랍게도 이게 된다. 아래는 그 증명이다.
+
+<details>
+<summary>증명</summary>
+
+우선 $L$에 대하여 차근차근 뜯어보면서 이걸 증명해보자. 일단 $L$은 $B$의 lower bound들의 집합이라고 했는데, $E\subset S$이고, lower bound들은 정의 1.7에 따라서, 모두 $S$에 포함되어 있다. 또한, $B$가 bounded below 되어있다고 했으니, 하나라도 lower bound가 존재한다는 것을 의미하고, 그것은 $L$이 공집합이 아니라는 것을 말해준다. 또한 $B$에서 아무 원소 $b$를 잡고, $L$에서 아무 원소 $l$을 잡아도, lower bound의 정의에 의해서 항상 $b\geq l$ 이다. 이 말을 다시 살펴보면, $L$의 모든 원소 $l$은 어떤 $b\in B\subset S$ (따라서 $b\in S$)에 대하여 $l\leq b$ 이므로, $L$은 bounded above 되어 있다.  <br> <br>
+
+우리가 방금 얻어낸 중요한 정보는 총 3개이다.  <br>
+1. $L\subset S$이다. <br>
+2. $L$은 empty set이 아니다. <br>
+3. $L$은 bounded above 되어있다. <br> <br>
+
+어디서 많이 본 조건들이 아닌가? 그렇다. 정의 1.10에서 우리는 이 조건들은 본적이 있고, $S$는 least-upper-bound-property (지금부터는 LUBP로도 부르겠다.) 를 지닌 ordered set이므로, 정의에 따라 $sup L$은 $S$에 존재한다. 우리는 방금 $\alpha = \sup L \in S$임을 보인것이다! <br> <br>
+
+이제 남은 과제는 $\alpha = \sup L = \inf B$ 임을 보이는 것이다. 그렇다면 이 Theorem을 증명하는데 성공하게 된다. 말로 풀어서 말하면, $L$의 supremum이 $B$의 infimum이라는 것을 증명하기만 하면 모두 끝난다는 것이다. <br> <br>
+
+여기서 우리는 귀류법을 사용할 것이다. 우선, 결론을 부정하여 $\alpha = \sup L \neq \inf B$라고 해보자. 정의 1.8에 따라서, $\alpha$가 $B$의 lower bound가 아니 '거나' (OR), $\beta > \alpha$ 일 때 $\beta$가 $B$의 lower bound인게 있다는 의미이다. <br> <br>
+
+우선 첫 번째 조건을 살펴보자. $\alpha$가 $B$의 lower bound가 아니라는 부분인데, 우리는 이 조건이 틀렸다는 것을 보여야 한다. $L$은 $B$의 모든 lower bound들을 모아둔 집합이기 때문에 $\alpha \in L$라는 것만 보일 수 있다면 이 조건은 쉽게 틀렸다는 것을 보일 수 있다.
+그렇다면 어떻게 $\alpha \in L$임을 보일 수 있을까? <br> <br>
+
+여기서 우리는 supremum의 정의를 한 번 더 살펴보도록 하겠다. 정의 1.8에 따라 $\gamma<\alpha$라면, $\gamma$는 $L$의 upper bound가 아니게 되고, 이는 $\gamma \notin B$임을 의미한다. 거꾸로 말하면, $\gamma \in B$ 라면 $\gamma$가 $L$의 upper bound이고, 이는 $\alpha \leq \gamma$임을 의미한다. 따라서, $\alpha$는 $B$의 lower bound이고, $\alpha\in L$이다. 이로써 우리는 첫 번째 조건이 거짓임을 보였다.
+
+그러나 두 조건이 'or'로 연결되어 있기 때문에 우리는 두 번째 조건인 $\beta > \alpha$ 일 때 $\beta$가 $B$의 lower bound인게 있다는 조건이 거짓임을 한 번 더 보여야 한다. 여기서 귀류법을 한 번 더 사용하도록 하겠다.
+
+그런 $\beta$가 존재한다고 가정하자. $\beta$는 $B$의 lower bound이기 때문에 $\beta \in L$ 이고, $\alpha = \sup L$이기 때문에, 정의에 따라 $\beta \leq \alpha$ 이다. 이는 우리가 처음에 가정했던 $\beta > \alpha$라는 것과 모순된다. 따라서 두 번째 조건도 거짓임을 밝혔다.
+
+두 조건이 모두 거짓임으로, 다시 말해 $\alpha$가 $B$의 lower bound가 '아닌 것'도 아니고, $\beta > \alpha$ 일 때 $\beta$가 $B$의 lower bound 인게 없다. 이는 우리의 가정과 모순되므로,  $\alpha = \sup L = \inf B$이다. $\alpha = \sup L \in S$ 이고, $\alpha = \sup L = \inf B$ 이므로, 당연히 $\inf B \in S$ 이다. $\blacksquare$
+
+</details>
+
+이걸로 Ordered Set 단원이 마무리 되었다. 이 단원에서는 order, ordered set, bounded above, bounded below, upper bound, lower bound, least upper bound (supremum), greatest lower bound (infimum), least-upper-bound-property가 무엇인지 정의하였고, least-upper-bound-property를 가진 ordered set은 greatest-lower-bound-property 또한 가짐을 증명하였다.
+
+대체 이런 용어를 왜 정의하는가 이해가 잘 안될 수 있다. 이런 걸 정의한 이유는 쉽게 말하자면 다음 단원들에서 쓰기 때문이지만, 필자는 이렇게 생각한다. 기존에 사용하던 최대값과 최소값의 개념을 확장한 느낌으로, 최대값과 최솟값이 정의되지 않는 집합들에서도 어떤 '경계'를 정의할 수 있도록 새로운 개념을 만들고 특징을 확립한 것이다.
+
+그렇게 생각하면 기존의 익숙한 개념을 좀 더 다양한 곳에서도 비슷하게 적용할 수 있게 하기 위해서 의미를 확장했을 뿐인 것이다. 그렇게 생각하면 마냥 낯설고 이상한 뻘짓은 아니라는 것을 알 수 있을 것이다. 이 소단원이 그러한 활동의 첫걸음인 것이다.
+
+그러나 해석학의 진정한 묘미는 여기서 시작된다. 기존의 개념을 확장하여 다른 곳에서도 비슷하게 사용되도록 새롭게 개념을 정의하게 되면, 기존의 영역에서 당연이 통용되던 성질이, 사실은 당연하지 않다는 사실을 깨닫게 될 것이다. 또한, 해석학은 엄밀하고 튼튼한 논리를 기반으로 전개되기 때문에, 공부하는 과정은 어렵고 고통스러워도, 그 과정이 모두 끝나 어떤 내용을 이해하게 된다면 엄청난 지적 희열을 느낄 수 있을 것이다. 
+
+## 마무리
+
+원래 오늘 계획은 1단원을 모두 마무리 하는 것이였다. 그러나 책의 텍스트 양도 많고, $\LaTeX$ 문법을 이용하여 타이핑을 하는 것은 고된 작업이라 그런지, 고작 2개의 소단원 밖에 다루지 못했다. 아쉽긴 하지만, 다른 소단원의 내용들은 내일 더 다루도록 하겠다.
+
+마지막으로, 오늘 배운 내용들을 간단하게 요약해보겠다.
+
+1. 유리수로는 못 나타내는 수가 많아서 실수가 필요하다.
+2. 실수를 정의하기 위해서는 ordered set과 field의 개념이 필요하다.
+3. ordered set을 정의하면서 기존의 최대값과 최솟값의 개념을 확장한 supermum과 infimum을 정의하였다.
+4. 시간이 부족해서 field의 정의부터는 내일 이어서 하겠다.
+
+오늘의 공부는 여기까지!
