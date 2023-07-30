@@ -31,7 +31,7 @@ tags: [ mathematical_analysis, mathematical_analysis_game ]
 
 ## The Real Field
 
-**1.19 Theorem**
+### 1.19 Theorem
 
 least-upper-bound-property 를 가지는 ordered field $\mathbb{R}$ 이 존재한다. 심지어, $\mathbb{R}$은 $\mathbb{Q}$를 *subfield* 로 지닌다.
 
@@ -47,7 +47,7 @@ least-upper-bound-property 를 가지는 ordered field $\mathbb{R}$ 이 존재�
 2. $\mathbb{R}$에서 정의된 addition과 multiplication을 $\mathbb{Q}$의 원소들에 대해서 적용한 결과가 $\mathbb{Q}$ 내부적으로 정의된 연산의 결과와 일치하고, 
 3. 양의 유리수는 $\mathbb{R}$의 *positive* 한 원소들이다.
 
-**1.20 Theorem**
+### 1.20 Theorem**
 
 1. 만약 $x \in \mathbb{R}$, $y \in \mathbb{R}$ 이고 $x > 0$ 이라면, 아래 문장을 만족하는 양의 정수 $n$이 존재한다.
 
@@ -55,7 +55,9 @@ least-upper-bound-property 를 가지는 ordered field $\mathbb{R}$ 이 존재�
 
 2. 만약 $x \in \mathbb{R}$, $y \in \mathbb{R}$ 이고 $x < y$ 이라면, $x < p < y$인 유리수 $p \in \mathbb{Q}$ 가 존재한다.
 
-해설: 여기서 이야기 한 두 정리는 불리는 특별한 방식이 있다. 첫 번째 정리는 *archimedean property* (아르키메데스 성질) 이라는 이름을 가지고 있고, 두 번째 정리는 특별히 이름이 있는지는 잘 모르겠지만, "$\mathbb{Q}$ is dense in $\mathbb{R}$" ($\mathbb{Q}$ 는 $\mathbb{R}$에서 조밀하다) 라고 표현되기도 한다.
+#### 해설
+
+여기서 이야기 한 두 정리는 불리는 특별한 방식이 있다. 첫 번째 정리는 *archimedean property* (아르키메데스 성질) 이라는 이름을 가지고 있고, 두 번째 정리는 특별히 이름이 있는지는 잘 모르겠지만, "$\mathbb{Q}$ is dense in $\mathbb{R}$" ($\mathbb{Q}$ 는 $\mathbb{R}$에서 조밀하다) 라고 표현되기도 한다.
 
 우선 아르키메데스 성질에 대해 살펴보자. 이 문장에서 말하는 바는, 실수체에 존재하는 어떤 *positive* 한 $x$와 아무 $y$를 들고와도, 어떤 양의 정수 $n$을 $x$에 곱해서 $y$보다 크게 만들 수 있다는 말이다. 예를 들면, $x$로 $3$으로 잡고, $y$를 $10000$ 으로 잡아도, $x$에다가 $n=3334$를 곱해주면, $nx=10002>y=10000$이 되어 식을 만족한다. 증명은 아래와 같다.
 

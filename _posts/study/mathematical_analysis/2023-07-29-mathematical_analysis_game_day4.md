@@ -88,6 +88,22 @@ $t^n < x$를 만족시키는 모든 '양의 실수' $t$들을 모두 모아놓�
 
 ### 1.22 Decimals
 
+어떤 $x > 0$가 실수라고 하자. 그리고 어떤 $n_0$가 $n_0 \leq x$ 를 만족시키는 가장 큰 정수라고 하자. ($\mathbb{R}$ 의 **archimedean property** 에 의해 이러한 $n_0$이 존재할 수 있다.) $n_0$, $n_1$, ... , $n_{k - 1}$를 선택한 후, $n_k$를 다음 식을 만족시키는 가장 큰 정수라고 하자.
+
+\\[n_0 + \frac{n_1}{10} + \cdots + \frac{n_k}{10^k} \leq x\\]
+
+$E$를 아래와 같은 수들을 모아둔 집합이라고 하자.
+
+\\[n_0 + \frac{n_1}{10} + \cdots + \frac{n_k}{10^k} \qquad (k = 0, 1, 2, \cdots)\\]
+
+그러면, $x=\sup E$이다. $x$의 *decimal expansion*은 다음과 같다.
+
+\\[n_0 \cdot n_1 n_2 n_3 \cdots\\]
+
+#### 해설
+
+(작성중)
+
 ## The Extended Real Number System
 
 ### 1.23 Definition
