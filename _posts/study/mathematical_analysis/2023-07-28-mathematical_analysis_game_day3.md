@@ -47,7 +47,7 @@ least-upper-bound-property 를 가지는 ordered field $\mathbb{R}$ 이 존재�
 2. $\mathbb{R}$에서 정의된 addition과 multiplication을 $\mathbb{Q}$의 원소들에 대해서 적용한 결과가 $\mathbb{Q}$ 내부적으로 정의된 연산의 결과와 일치하고, 
 3. 양의 유리수는 $\mathbb{R}$의 *positive* 한 원소들이다.
 
-### 1.20 Theorem**
+### 1.20 Theorem
 
 1. 만약 $x \in \mathbb{R}$, $y \in \mathbb{R}$ 이고 $x > 0$ 이라면, 아래 문장을 만족하는 양의 정수 $n$이 존재한다.
 

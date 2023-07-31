@@ -80,7 +80,10 @@ $t^n < x$를 만족시키는 모든 '양의 실수' $t$들을 모두 모아놓�
 <summary>증명</summary>
 
 <br>
-(작성중) $\blacksquare$
+이 증명에서는 앞에서 이미 증명을 완료한 정리 1.21을 활용할 것이다. 혹시 앞의 정리 내용을 읽고 오지 않았다면, 적어도 그것이 무슨 정리인지 정도는 읽고 오도록 하자. <br> <br>
+
+1.21의 정리를 
+$\blacksquare$
 
 </details>
 
@@ -107,6 +110,12 @@ $E$를 아래와 같은 수들을 모아둔 집합이라고 하자.
 ## The Extended Real Number System
 
 ### 1.23 Definition
+
+*The extended real number system* (확장된 실수 체계)는 실수체 $\mathbb{R}$과 두 기호, $+\infty$ 와 $-\infty$로 구성된다. 우리는 기존의 order는 $\mathbb{R}$ 에서의 order을 유지하되, 모든 $x \in \mathbb{R}$ 에 대하여 $-\infty < x < \infty$ 로 정의한다.
+
+이로써, $+\infty$는 확장된 실수 체계의 모든 subset의 upper bound이며, 이 확장된 실수 체계의 모든 *nonempty* subset은 least-upper-bound를 가진다. (확장된 실수 체게는 LUBP를 가진다.) 이 내용들은 lowe bound들에 대해서도 성립한다.
+
+(작성중)
 
 ## 마무리
 
