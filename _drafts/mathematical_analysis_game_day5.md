@@ -87,41 +87,122 @@ $x = (a,b)$ 와 $y = (c,d)$ 를 두 복소수라고 하자. 우리는 $a = c$ �
 
 ### 1.27 Definition
 
+$i = (0,1)$.
+
 #### 해설
+
+(작성중)
 
 ### 1.28 Theorem
 
+$i^2=-1$.
+
+#### 증명
+
+$i^2=(0,1)(0,1)=(-1,0)=-1$.
+
 #### 해설
+
+(작성중)
 
 ### 1.29 Theorem
 
+만약 $a$ 와 $b$ 가 실수라면, $(a,b) = a + bi$ 이다. 
+
+#### 증명
+
 #### 해설
+
+(작성중)
 
 ### 1.30 Definition
 
+만약 $a$, $b$ 가 실수이고 $z = a + bi$ 라면, 복소수 $\overline{z}=a-bi$ 는 $z$의 *conjugate* (켤레복소수) 라고 부른다. 수 $a$와 $b$는 각각 $z$의 *real part* (실수부) 와 *imaginary part* (허수부) 라고 부른다.
+
+우리는 때때로 다음과 같이 쓰기도 한다.
+
+$$a = \operatorname{Re}(z), \qquad b = \operatorname{Im}(z)$$
+
 #### 해설
+
+(작성중)
 
 ### 1.31 Theorem
 
+만약 $z$ 와 $w$ 가 복소수라면, 다음 내용들이 성립한다.
+
+1. $\overline{z + w} = \overline{z} + \overline{w}$
+2. $\overline{zw} = \overline{z} \cdot \overline{w}$
+3. $z + \overline{z} = 2\operatorname{Re}(z), \ z - \overline{z} = 2i\operatorname{Im}(z)$
+4. $z\overline{z}$ 는 실수이고 양수이다. ($z = 0$ 인 경우를 제외하고)
+
 #### 해설
+
+(작성중)
 
 ### 1.32 Definition
 
+만약 $z$ 가 복소수라면, 그것의 *absolute value* (절댓값) $|z|$ 는 음수가 아닌 $z\overline{z}$ 의 제곱근이며 그것은 $|z|=(z\overline{z})^{1/2}$ 이다.
+
 #### 해설
+
+(작성중)
 
 ### 1.33 Theorem
 
+$z$ 와 $w$ 가 복소수라고 하자. 그러면 다음 내용들이 성립한다.
+
+1. $z = 0$ 이 아닌 한은 $|z| > 0$ 이다. 그리고 $|0|=0$ 이다.
+2. $|\overline{z}|=|z|$
+3. $|zw|=|z||w|$
+4. $|\operatorname{Re}z| \leq |z|$
+5. $|z + w| \leq |z| + |w|$
+
+#### 해설
+
+(작성중)
+
 ### 1.34 Notation
 
+만약 $x_1, x_2, \cdots, x_n$ 이 복소수라면, 우리는 다음과 같이 표기한다.
+
+$$x_1 + x_2 + \cdots + x_n = \sum_{j=1}^{n}{x_j}$$
+
+우리는 이 구역을 *Schwarz inequality* (슈바르츠 부등식)으로 알려진 중요한 부등식 하나를 다룬 뒤 마칠 것이다.
+
+#### 해설
+
+(작성중)
+
 ### 1.35 Theorem
+
+만약 $a_1, \cdots, a_n$ 와 $b_1, \cdots, b_n$ 이 복소수들이라면, 다음 부등식이 성립한다.
+
+$$\left|\sum_{j=1}^{n}{a_j \overline{b_j}}\right| \leq \sum_{j=1}^{n}{|a_j|^2} \sum_{j=1}^{n}{|b_j|^2}$$
+
+#### 해설
+
+(작성중)
 
 ## Euclidean Spaces
 
 ### 1.36 Definitions
 
+#### 해설
+
+(작성중)
+
 ### 1.37 Theorem
 
+#### 해설
+
+(작성중)
+
 ### 1.38 Remarks
+
+#### 해설
+
+(작성중)
 
 ## 마무리
 
