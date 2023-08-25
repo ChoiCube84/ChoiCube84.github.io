@@ -188,6 +188,27 @@ $$\left|\sum_{j=1}^{n}{a_j \overline{b_j}}\right| \leq \sum_{j=1}^{n}{|a_j|^2} \
 
 ### 1.36 Definitions
 
+모든 양의 정수 $k$ 에 대하여, 실수이면서 $\mathbf{x}$ 의 *coordinates* 라고 불리는 $x_1, \cdots, x_k$ 로 구성된
+
+$$\textbf{x} = (x_1, x_2, \cdots, x_k)$$
+
+와 같은 ordered $k$-tuples 의 집합을 $\mathbb{R}^k$ 라고 하자.
+
+$\mathbb{R}^k$ 의 원소들은 특히 $k > 1$ 일 때 *points* (점들) 이나 *vector* (벡터) 라고 불린다. 우리는 이러한 벡터들을 **굵은 글씨**로 표기한다.
+
+만약 $\textbf{y} = (y_1, \cdots, y_k)$ 이고 $\alpha$ 가 실수라면, 
+
+$$
+\begin{align*}
+    \textbf{x} + \textbf{y} &= (x_1 + y_1, \cdots, x_k + y_k) \\
+    \alpha \textbf{x} &= (\alpha x_1, \cdots, \alpha x_k)
+\end{align*}
+$$
+
+이고, $\textbf{x} + \textbf{y} \in \mathbb{R}^k$ 이며 $\alpha \textbf{x} \in \mathbb{R}^k$ 이다. 이것은 벡터들의 *addition* (덧셈) 을 정의하며, 또한 '실수 (스칼라) 에 의한' 벡터의 *multiplication* (곱셈) 을 정의한다. 이 두 연산은 *commutative law* (교환 법칙), *associative law* (결합 법칙), 그리고 *distributive law* (분배 법칙) 을 만족시키며 (실수에서의 비슷한 법칙들을 고려해보면, 증명은 사소하다.) $\mathbb{R}^k$ 를 *vector space over the real field* 가 되도록 한다. $\mathbb{R}^k$ 의 *zero element* (때때로 *origin* 이나 *null vector* 로 불리는) 는 $\textbf{0}$ 으로, 모든 *coordinate* 들이 $0$인 것이다.
+
+우리는 또한 (작성중)
+
 #### 해설
 
 (작성중)
