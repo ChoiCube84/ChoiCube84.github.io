@@ -6,7 +6,7 @@ baseurl:            ""
 url:                "https://choicube84.github.io"
 
 timezone: Asia/Seoul
-future: true
+future: false
 
 # Social Profiles
 twitter_username:   
