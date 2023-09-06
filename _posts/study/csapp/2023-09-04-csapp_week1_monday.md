@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "컴퓨터 SW시스템 개론 - 1주차 월요일"
-subtitle: "부제는 없어 배고파도"
+subtitle: "복습 노트"
 date: 2023-09-04 23:59:00+0900
 background: '/img/posts/2023/csapp/bg_csapp.png'
 katex: true
