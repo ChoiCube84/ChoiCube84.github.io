@@ -3,7 +3,7 @@ layout: post
 title: "2023년 겨울학기의 시작"
 subtitle: "새로운 계획"
 date: 2023-12-25 23:59:00+0900
-background: '/img/posts/2023/November/18/military.jpg'
+background: '/img/posts/2023/December/25/winter_semester.jpg'
 katex: true
 category: Life
 tags: [ vacation ]
@@ -29,7 +29,7 @@ tags: [ vacation ]
 
 ### 계절학기를 듣는 이유
 
-~~교양 학점을 채우기 위해서이다. 사실 별건없다.~~ 많은 과목 중에 이 2과목을 선택한 이유는, 꿀과목이라는 소문도 있어서 였지만, 각 과목에서 다루는 내용이 흥미로워 보였기 때문이었다.
+~~사실 별건없다. 교양 학점을 채우기 위해서이다.~~ 많은 과목 중에 이 2과목을 선택한 이유는, 꿀과목이라는 소문도 있어서 였지만, 각 과목에서 다루는 내용이 흥미로워 보였기 때문이었다.
 
 - 북한학개론: 
 
