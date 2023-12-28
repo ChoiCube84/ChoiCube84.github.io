@@ -41,7 +41,7 @@ tags: [ mathematical_analysis, mathematical_analysis_game ]
 
 ### 1.24 Definition
 
-*complex number* (복소수) 는 실수들의 *ordered pair* (정렬된 쌍) $(a, b)$ 이다. "Ordered" 의 의미는 $a \neq b$ 일 때 $(a, b)$ 와 $(b, a)$ 를 서로 구분되는 것 (다른 것) 으로 간주한다는 의미이다.
+`complex number` (복소수) 는 실수들의 `ordered pair` (정렬된 쌍) $(a, b)$ 이다. "Ordered" 의 의미는 $a \neq b$ 일 때 $(a, b)$ 와 $(b, a)$ 를 서로 구분되는 것 (다른 것) 으로 간주한다는 의미이다.
 
 $x = (a,b)$ 와 $y = (c,d)$ 를 두 복소수라고 하자. 우리는 $a = c$ 이고 $b = d$ 일 때만 $x = y$ 라고 쓴다. 동시에, $x = y$로 쓰는 것은 $a = c$ 이고 $b = d$ 임을 의미한다. (이 정의는 불필요하지 않다. 정수 두개로 표현되는 유리수에서 같다는 개념이 어떻게 정의되는지 생각해보라.)
 
@@ -79,7 +79,7 @@ $x = (a,b)$ 와 $y = (c,d)$ 를 두 복소수라고 하자. 우리는 $a = c$ �
 
 \\[(a, b) + (b, 0) = (a + b, 0), \qquad (a, 0)(b, 0) = (ab, 0)\\]
 
-정리 1.26 은 $(a, 0)$ 형태의 복소수들은 대응하는 실수 $a$와 같은 연산 성질을 가진다는 것을 보여준다. 그러므로 우리는 $(a, 0)$와 $a$가 같다고 볼 수 있다. 이 동일성은 *complex field* (복소수체) 가 *real field* (실수체) 를 *subfield* 로 가진다는 것을 알 수 있다.
+정리 1.26 은 $(a, 0)$ 형태의 복소수들은 대응하는 실수 $a$와 같은 연산 성질을 가진다는 것을 보여준다. 그러므로 우리는 $(a, 0)$와 $a$가 같다고 볼 수 있다. 이 동일성은 `complex field` (복소수체) 가 `real field` (실수체) 를 `subfield` 로 가진다는 것을 알 수 있다.
 
 어떤 독자들은 우리가 정체불명의 $-1$의 제곱근에 대한 언급없이 복소수들을 정이ㅡ했다는 것을 눈치챘을 것이다. 이제 우리는 $(a, b)$와 같은 표기법이 더 익숙한 표기법인 $a + bi$ 와 동일하다는 것을 보일 것이다.
 
@@ -117,7 +117,7 @@ $i^2=(0,1)(0,1)=(-1,0)=-1$.
 
 ### 1.30 Definition
 
-만약 $a$, $b$ 가 실수이고 $z = a + bi$ 라면, 복소수 $\overline{z}=a-bi$ 는 $z$의 *conjugate* (켤레복소수) 라고 부른다. 수 $a$와 $b$는 각각 $z$의 *real part* (실수부) 와 *imaginary part* (허수부) 라고 부른다.
+만약 $a$, $b$ 가 실수이고 $z = a + bi$ 라면, 복소수 $\overline{z}=a-bi$ 는 $z$의 `conjugate` (켤레복소수) 라고 부른다. 수 $a$와 $b$는 각각 $z$의 `real part` (실수부) 와 `imaginary part` (허수부) 라고 부른다.
 
 우리는 때때로 다음과 같이 쓰기도 한다.
 
@@ -142,7 +142,7 @@ $$a = \operatorname{Re}(z), \qquad b = \operatorname{Im}(z)$$
 
 ### 1.32 Definition
 
-만약 $z$ 가 복소수라면, 그것의 *absolute value* (절댓값) $|z|$ 는 음수가 아닌 $z\overline{z}$ 의 제곱근이며 그것은 $|z|=(z\overline{z})^{1/2}$ 이다.
+만약 $z$ 가 복소수라면, 그것의 `absolute value` (절댓값) $|z|$ 는 음수가 아닌 $z\overline{z}$ 의 제곱근이며 그것은 $|z|=(z\overline{z})^{1/2}$ 이다.
 
 #### 해설
 
@@ -168,7 +168,7 @@ $z$ 와 $w$ 가 복소수라고 하자. 그러면 다음 내용들이 성립한�
 
 $$x_1 + x_2 + \cdots + x_n = \sum_{j=1}^{n}{x_j}$$
 
-우리는 이 구역을 *Schwarz inequality* (슈바르츠 부등식)으로 알려진 중요한 부등식 하나를 다룬 뒤 마칠 것이다.
+우리는 이 구역을 `Schwarz inequality` (슈바르츠 부등식)으로 알려진 중요한 부등식 하나를 다룬 뒤 마칠 것이다.
 
 #### 해설
 
@@ -188,13 +188,13 @@ $$\left|\sum_{j=1}^{n}{a_j \overline{b_j}}\right| \leq \sum_{j=1}^{n}{|a_j|^2} \
 
 ### 1.36 Definitions
 
-모든 양의 정수 $k$ 에 대하여, 실수이면서 $\mathbf{x}$ 의 *coordinates* 라고 불리는 $x_1, \cdots, x_k$ 로 구성된
+모든 양의 정수 $k$ 에 대하여, 실수이면서 $\mathbf{x}$ 의 `coordinates` 라고 불리는 $x_1, \cdots, x_k$ 로 구성된
 
 $$\textbf{x} = (x_1, x_2, \cdots, x_k)$$
 
 와 같은 ordered $k$-tuples 의 집합을 $\mathbb{R}^k$ 라고 하자.
 
-$\mathbb{R}^k$ 의 원소들은 특히 $k > 1$ 일 때 *points* (점들) 이나 *vector* (벡터) 라고 불린다. 우리는 이러한 벡터들을 **굵은 글씨**로 표기한다.
+$\mathbb{R}^k$ 의 원소들은 특히 $k > 1$ 일 때 `points` (점들) 이나 `vector` (벡터) 라고 불린다. 우리는 이러한 벡터들을 **굵은 글씨**로 표기한다.
 
 만약 $\textbf{y} = (y_1, \cdots, y_k)$ 이고 $\alpha$ 가 실수라면, 
 
@@ -205,7 +205,7 @@ $$
 \end{align*}
 $$
 
-이고, $\textbf{x} + \textbf{y} \in \mathbb{R}^k$ 이며 $\alpha \textbf{x} \in \mathbb{R}^k$ 이다. 이것은 벡터들의 *addition* (덧셈) 을 정의하며, 또한 '실수 (스칼라) 에 의한' 벡터의 *multiplication* (곱셈) 을 정의한다. 이 두 연산은 *commutative law* (교환 법칙), *associative law* (결합 법칙), 그리고 *distributive law* (분배 법칙) 을 만족시키며 (실수에서의 비슷한 법칙들을 고려해보면, 증명은 사소하다.) $\mathbb{R}^k$ 를 *vector space over the real field* 가 되도록 한다. $\mathbb{R}^k$ 의 *zero element* (때때로 *origin* 이나 *null vector* 로 불리는) 는 $\textbf{0}$ 으로, 모든 *coordinate* 들이 $0$인 것이다.
+이고, $\textbf{x} + \textbf{y} \in \mathbb{R}^k$ 이며 $\alpha \textbf{x} \in \mathbb{R}^k$ 이다. 이것은 벡터들의 `addition` (덧셈) 을 정의하며, 또한 '실수 (스칼라) 에 의한' 벡터의 `multiplication` (곱셈) 을 정의한다. 이 두 연산은 `commutative law` (교환 법칙), `associative law` (결합 법칙), 그리고 `distributive law` (분배 법칙) 을 만족시키며 (실수에서의 비슷한 법칙들을 고려해보면, 증명은 사소하다.) $\mathbb{R}^k$ 를 `vector space over the real field` 가 되도록 한다. $\mathbb{R}^k$ 의 `zero element` (때때로 `origin` 이나 `null vector` 로 불리는) 는 $\textbf{0}$ 으로, 모든 `coordinate` 들이 $0$인 것이다.
 
 우리는 또한 (작성중)
 
@@ -215,11 +215,24 @@ $$
 
 ### 1.37 Theorem
 
+$\mathbf x, \mathbf y, \mathbf z \in \mathbb R^k$ 와 실수 $\alpha$ 에 대하여 다음이 성립한다.
+
+1. $|\mathbf x| \ge 0$
+2. $|\mathbf x| = 0$ 이면 $\mathbf x = \mathbf 0$ 이고, 그 역도 성립한다.
+3. $|\alpha \mathbf x| = |\alpha| |\mathbf x|$
+4. $|\mathbf x \cdot \mathbf y| \le |\mathbf x| |\mathbf y|$
+5. $|\mathbf x + \mathbf y| \le |\mathbf x| + |\mathbf y|$
+6. $|\mathbf x - \mathbf z| \le |\mathbf x - \mathbf y| + |\mathbf y - \mathbf z|$
+
 #### 해설
 
 (작성중)
 
 ### 1.38 Remarks
+
+정리 1.37의 1, 2, 6번 부분은 $\mathbb R^k$ 를 `metric space` (거리 공간) 으로 볼 수 있게 해준다. 
+
+$\mathbb R^1$ 은 주로 'the line' (직선) 이나 'the real line' (실선) 으로 불린다. 비슷하게, $\mathbb R^2$ 은 'the plane' (평면) 이나 'the complex plane' (복소평면) 으로 불린다. 이 두 가지 경우에, `norm` (노름) 은 해당하는 실수나 복소수의 절댓값이다.
 
 #### 해설
 

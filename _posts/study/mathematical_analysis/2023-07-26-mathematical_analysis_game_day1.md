@@ -93,9 +93,9 @@ $p^2=m^2/n^2=2$ 이므로, $m^2=2n^2$이다. 여기서 알 수 있는 것은 $m$
 
 2. 만약 $x$가 $A$의 구성원이 아니라면, $x\notin A$와 같이 나타낸다.
 
-3. 어떤 집합에 요소가 하나도 없다면 *empty set* (공집합) 이라고 부르며, 하나라도 있다면 *nonempty* 하다고 말한다.
+3. 어떤 집합에 요소가 하나도 없다면 `empty set` (공집합) 이라고 부르며, 하나라도 있다면 `nonempty` 하다고 말한다.
 
-4. 집합 $A$와 $B$가 있을 때, $A$의 모든 원소가 $B$의 원소일 경우, $A$는 $B$의 *subset* (부분집합) 이라고 부르며, $A\subset B$ 또는 $B\supset A$로 표현한다. 이 때, $B$의 원소 중에 $A$에는 포함되지 않는 것이 있을 경우, $A$는 $B$의 *proper* subset (진부분집합) 이라고 부른다. 참고로, 모든 집합은 자기자신의 subset이다. 
+4. 집합 $A$와 $B$가 있을 때, $A$의 모든 원소가 $B$의 원소일 경우, $A$는 $B$의 `subset` (부분집합) 이라고 부르며, $A\subset B$ 또는 $B\supset A$로 표현한다. 이 때, $B$의 원소 중에 $A$에는 포함되지 않는 것이 있을 경우, $A$는 $B$의 `proper subset` (진부분집합) 이라고 부른다. 참고로, 모든 집합은 자기자신의 subset이다. 
 
 5. 만약 $A\subset B$이고 $B\subset A$라면, $A=B$로 나타낸다. 그렇지 않으면, $A\neq B$로 나타낸다.
 
@@ -119,7 +119,7 @@ $p^2=m^2/n^2=2$ 이므로, $m^2=2n^2$이다. 여기서 알 수 있는 것은 $m$
 
 ### 1.5 Definition
 
-$S$를 어떤 집합이라고 하자. 어떤 *order*는 $S$에서 정의 되는 관계로, $<$ 기호로 표현되며 다음과 같은 두 가지 성질을 만족한다.
+$S$를 어떤 집합이라고 하자. 어떤 `order`는 $S$에서 정의 되는 관계로, $<$ 기호로 표현되며 다음과 같은 두 가지 성질을 만족한다.
 
 1. 만약 $x\in S$이고 $y\in S$라면 이 세 가지 문장중 딱 하나만 참이다.  
 
@@ -137,19 +137,19 @@ $x<y$ 대신 $y>x$라고 쓰기도 한다. $x\leq y$라고 쓰는 것은, $x<y$ 
 
 ### 1.6 Definition
 
-*ordered set*은 *order*가 정의된 집합이다.
+`ordered set`은 `order`가 정의된 집합이다.
 
 #### 해설
 
-*ordered set*이라는 용어는 단어가 주는 느낌 그대로 *order*가 정의된 집합을 의미한다. 책에 나온 예시로 설명하면, 임의의 유리수 $r$과 $s$에 대하여 $s-r$이 양의 유리수를 의미하도록 $r<s$를 정의하면, 유리수 $\mathbb{Q}$는 *ordered set*이다.
+`ordered set`이라는 용어는 단어가 주는 느낌 그대로 `order`가 정의된 집합을 의미한다. 책에 나온 예시로 설명하면, 임의의 유리수 $r$과 $s$에 대하여 $s-r$이 양의 유리수를 의미하도록 $r<s$를 정의하면, 유리수 $\mathbb{Q}$는 `ordered set`이다.
 
 ### 1.7 Definition
 
-$S$가 ordered set이고, $E\subset S$라고 하자. 어떤 $\beta\in S$가 존재하여 모든 $x\in E$에 대하여  $x\leq\beta$를 만족시키면, $E$가 *bounded above*라고 하며, $\beta$를 $E$의 *upper bound*라고 한다. *lower bound*는 위의 정의에서 $\leq$ 기호를 $\geq$ 기호로 바꾸면 정의된다.
+$S$가 ordered set이고, $E\subset S$라고 하자. 어떤 $\beta\in S$가 존재하여 모든 $x\in E$에 대하여  $x\leq\beta$를 만족시키면, $E$가 `bounded above`라고 하며, $\beta$를 $E$의 `upper bound`라고 한다. `lower bound`는 위의 정의에서 $\leq$ 기호를 $\geq$ 기호로 바꾸면 정의된다.
 
 #### 해설
 
-슬슬 낯선 단어가 나오기 시작한다. 우선 이 정의에서는 $E$의 *upper bound*와 *lower bound*가 무엇인지를 정의하는데, bound라는 단어는 ~~튀어오르다~~ 경계라는 의미를 가지고 있으며, *upper bound*는 말 그대로 위에 있는 경계, *lower bound*는 아래에 있는 경계를 의미한다. $E$의 어떠한 원소도 *upper bound*보다 클 수 없으며, *lower bound*보다 작을 수 없다.
+슬슬 낯선 단어가 나오기 시작한다. 우선 이 정의에서는 $E$의 `upper bound`와 `lower bound`가 무엇인지를 정의하는데, bound라는 단어는 경계라는 의미를 가지고 있으며, `upper bound`는 말 그대로 위에 있는 경계, `lower bound`는 아래에 있는 경계를 의미한다. $E$의 어떠한 원소도 `upper bound`보다 클 수 없으며, `lower bound`보다 작을 수 없다.
 
 ### 1.8 Definition
 
@@ -158,10 +158,10 @@ $S$가 어떤 ordered set이라고 하고, $E\subset S$이며, $E$가 bounded ab
 1. $\alpha$는 $E$의 upper bound이다.
 2. $\gamma < \alpha$인 경우 $\gamma$는 $E$의 upper bound가 아니다.
 
-$\alpha$를 $E$의 *least upper bound* 또는 *supremum* 이라고 부르며, 다음과 같이 쓴다.  
+$\alpha$를 $E$의 `least upper bound` 또는 `supremum` 이라고 부르며, 다음과 같이 쓴다.  
 \\[\alpha=\sup E\\]
 
-$E$의 *greatest lower bound* 또는 *infimum* 도 같은 방식으로 정의된다.  
+$E$의 `greatest lower bound` 또는 `infimum` 도 같은 방식으로 정의된다.  
 \\[\alpha=\inf E\\]
 
 가 의미하는 바는 $\alpha$는 $E$의 lower bound이며, $\beta>\alpha$일 때 $\beta$가 $E$의 lower bound인 것은 없다는 것이다.
@@ -170,34 +170,34 @@ $E$의 *greatest lower bound* 또는 *infimum* 도 같은 방식으로 정의된
 
 드디어 점점 머리가 아픈 내용이 나오기 시작한다. 갑자기 알파, 베타, 감마 같은 그리스 문자들이 튀어나오고 어려운 영어 단어들이 우리에게 공포를 선사한다. 하지만 그 말을 천천히 뜯어 보면 그렇게까지 어려운 개념은 아니다.
 
-*least upper bound*라는 용어를 뜯어보면, '가장 작은 위에 있는 경계'라는 말이된다. 이게 무슨 말이냐 하면, 위에 있는 경계는 경계인데, 그 경계 들중 가장 작은거라고 생각하면 된다. 이해를 돕기 위한 설명을 하자면, 위에서 아래로 뚜껑을 덮는 느낌을 상상하면 된다.
+`least upper bound`라는 용어를 뜯어보면, '가장 작은 위에 있는 경계'라는 말이된다. 이게 무슨 말이냐 하면, 위에 있는 경계는 경계인데, 그 경계 들중 가장 작은거라고 생각하면 된다. 이해를 돕기 위한 설명을 하자면, 위에서 아래로 뚜껑을 덮는 느낌을 상상하면 된다.
 
-물이 가득 담긴 병을 상상해 보아라. 그 위에 뚜껑을 덮으려고 하는데, 뚜껑을 너무 아래로 내려버리면 물이 넘쳐버릴 것이다. 그래서 위에서 천천히 내려오는 방식으로 뚜껑을 덮는데, 공중에 있는 동안은 upper bound이되, *least upper bound*는 아니다. 뚜껑을 아직 더 내릴 수 있기 때문이다. 물 표면까지 내려와 딱 닿는 순간의 이미지를 *least upper bound*의 느낌으로 생각하면 된다. 여전히 뚜껑은 물 위에 있지만, 더 내려가는 순간 수면의 높이보다 뚜껑의 위치가 낮아져 물이 넘치는 것이다.
+물이 가득 담긴 병을 상상해 보아라. 그 위에 뚜껑을 덮으려고 하는데, 뚜껑을 너무 아래로 내려버리면 물이 넘쳐버릴 것이다. 그래서 위에서 천천히 내려오는 방식으로 뚜껑을 덮는데, 공중에 있는 동안은 upper bound이되, `least upper bound`는 아니다. 뚜껑을 아직 더 내릴 수 있기 때문이다. 물 표면까지 내려와 딱 닿는 순간의 이미지를 `least upper bound`의 느낌으로 생각하면 된다. 여전히 뚜껑은 물 위에 있지만, 더 내려가는 순간 수면의 높이보다 뚜껑의 위치가 낮아져 물이 넘치는 것이다.
 
 <figure>
 	<img src="/img/posts/2023/July/26/lub_water_analogy.png" width="100%" height="100%" alt="least upper bound 물병 비유" title="least upper bound 물병 비유">
 	<figcaption>그림으로 표현하면 이런 느낌이 된다. 참고로 그림에 보이는 녀석은 '해석이'다. 앞으로 자주 보게 될 것 같다.</figcaption>
 </figure>
 
-*greatest lower bound*도 비슷한 느낌으로 이해하면 될 것 같다. 그냥 아래에서 뚜껑을 덮는걸로만 바꾸면 얼추 비슷한 느낌인 것이다.
+`greatest lower bound`도 비슷한 느낌으로 이해하면 될 것 같다. 그냥 아래에서 뚜껑을 덮는걸로만 바꾸면 얼추 비슷한 느낌인 것이다.
 
 다음에 나오는 1.9 예시에서는 1.8에서의 정의를 활용하여 몇 가지 집합에서 이 개념들이 어떻게 적용되는지를 설명한다. 여기서는 생략하도록 하겠다. 궁금한 사람은 책을 직접 읽어보기를 바란다.
 
 ### 1.10 Definition
 
-어떤 ordered set $S$는 다음의 성질을 만족할 떄, *least-upper-bound-property*를 만족한다고 한다:
+어떤 ordered set $S$는 다음의 성질을 만족할 떄, `least-upper-bound-property`를 만족한다고 한다:
 
 만약 $E\subset S$이고, $E$가 공집합이 아니며, $E$가 bounded above 되어있으면, $\sup E$는 $S$에 존재한다.
 
 #### 해설
 
-이 부분의 정의가 무슨 말을 하는건지 조금 헷갈릴 수 있다. $S$가 *least-upper-bound-property*를 가지고 있다는 것은, $S$의 부분집합인 $E$가 특별한 성질을 가지게 된다는 것을 의미한다.
+이 부분의 정의가 무슨 말을 하는건지 조금 헷갈릴 수 있다. $S$가 `least-upper-bound-property`를 가지고 있다는 것은, $S$의 부분집합인 $E$가 특별한 성질을 가지게 된다는 것을 의미한다.
 
 그 특별한 성질이 무엇인가 하면, $S$에서 가져온 부분집합 $E$가 운좋게도 공집합이 아니면서 bounded above 되어있다면, 그 부분집합 $E$의 least upper bound가 존재하고, 그것이 $S$에 포함된다는 것이다.
 
 만약 기껏 $E$를 뽑긴헀는데, 공집합이거나 bounded above 되어있지 않다면, 이 정의에서는 딱히 할 수 있는 이야기는 없다. ~~(이 정의에서가 아니여도 달리 할 수 있는 이야기가 뭐가 있을지는 나도 잘 모르겠다.)~~
 
-여기서 한 가지 의문이 들게 된다. *least-upper-bound-property*라는게 있다면, *greatest-lower-bound-property*는 없는가? 그것에 대한 이야기가 다음에 오는 Theorem 1.10이다.
+여기서 한 가지 의문이 들게 된다. `least-upper-bound-property`라는게 있다면, `greatest-lower-bound-property`는 없는가? 그것에 대한 이야기가 다음에 오는 Theorem 1.10이다.
 
 ### 1.11 Theorem
 
@@ -208,7 +208,7 @@ $S$가 least-upper-bound-property를 지닌 ordered set이라고 가정하자. $
 
 #### 해설
 
-이 Theorem이 말하고자 하는 것은 *least-upper-bound-property*를 가진다는 것은, 동시에 *greatest-lower-bound-property*를 가진다는 것을 의미한다는 것이다. 그걸 동시에 가진다는게 말이나 되나 싶을 수 있지만, 놀랍게도 이게 된다. 아래는 그 증명이다.
+이 Theorem이 말하고자 하는 것은 `least-upper-bound-property`를 가진다는 것은, 동시에 `greatest-lower-bound-property`를 가진다는 것을 의미한다는 것이다. 그걸 동시에 가진다는게 말이나 되나 싶을 수 있지만, 놀랍게도 이게 된다. 아래는 그 증명이다.
 
 <details>
 <summary>증명</summary>
