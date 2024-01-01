@@ -39,7 +39,9 @@ tags: [ mathematical_analysis, mathematical_analysis_game ]
 
 ### 2.1 Definition
 
-(WIP)
+두 집합 $A$ 와 $B$ 를 생각해보자. 이 집합들의 원소들이 무엇이던간에, $A$의 각 원소 $x$ 가 어떤 특정한 방식으로 $B$ 의 원소인 $f(x)$ 와 관련이 있다고 한다면, $f$ 를 $A$ 에서 $B$ 로의 `function (함수)`  (또는 $A$ 에서 $B$ 로의 `mapping (매핑)`) 이라고 한다. 
+
+이 때, 집합 $A$ 는 $f$ 의 `domain (정의역)` 이라고 불리고 (우리는 이 때 또한 $f$ 가 $A$ 에서 정의되어 있다고 한다), 그리고 원소들인 $f(x)$ 들은 $f$ 의 `values (값들)` 라고 불린다. $f$ 의 모든 `values` 들의 집합을 `range (치역)` 라고 부른다.
 
 #### 해설
 
@@ -47,7 +49,11 @@ tags: [ mathematical_analysis, mathematical_analysis_game ]
 
 ### 2.2 Definition
 
-(WIP)
+$A$ 와 $B$ 를 두 개의 집합, 그리고 $f$ 를 $A$ 에서 $B$ 로의 `mapping` 이라고 하자.
+만약 $E \subset A$ 이고, $f(E)$ 를 모든 $x \in E$ 에 대한 $f(x)$ 원소들의 집합이라고 정의한다면, 우리는 $f(E)$ 를 $f$ 에 의한 $E$ 의 `image (상)` 라고 한다. 이러한 방식의 표기법에선, $f(A)$ 는 $f$ 의 `range` 이다. 
+
+It is clear that $f(A) \subset B$. If $f(A) = B$, we say that $f$ maps A onto B. (Note that, according to this usage, onto is more specific than into.)
+If $E \subset B$, $f^{-1}(E)$ denotes the set of all $x \in A$ such that $f(x) \in E$. We call $f^{-1}(E)$ the inverse image of $E$ under $f$ If $y \in B$, $f^{-1}(y)$ is the set of all $x \in A$ such that $f(x) = y$. If, for each $y \in B$, $f^{-1}(y)$ consists of at most one element of $A$, then $f$ is said to be a 1-1 (one-to-one) mapping of $A$ into $B$. This may also be expressed as follows: $f$ is a 1-1 mapping of $A$ into $B$ provided that $f(x_1) \ne f(x_2)$ whenever $x_1 \ne x_2$ , $x_1 \in A$, $x_2 \in A$. (The notation $x_1 \ne x_2$ means that $x_1$ and $x_2$ are distinct elements; otherwise we write $x_1 = x_2$.)
 
 #### 해설
 
