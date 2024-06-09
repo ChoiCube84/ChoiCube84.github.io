@@ -1,6 +1,7 @@
 ---
 layout: post
-subtitle: 솔브드 시즌 4 업데이트에 따른 프로그래밍 공부 전략
+title: 솔브드 시즌 4 업데이트
+subtitle: 새로운 PS 공부 전략
 date: '2024-06-09 23:59:00+0900'
 background: /img/posts/2024/problem_solving/problem_solving.png
 katex: true
