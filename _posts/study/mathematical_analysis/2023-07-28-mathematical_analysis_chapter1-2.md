@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 해석학 1단원 실수체와 복소수체 - 1
+title: 해석학 1단원 실수체와 복소수체 - 2
 subtitle: '실수체, 확장 실수계'
 date: '2023-07-28 23:59:00+0900'
 background: /img/posts/2023/July/mathematical_analysis.jpg
