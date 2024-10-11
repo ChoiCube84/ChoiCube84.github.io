@@ -35,8 +35,9 @@ $x = (a,b)$ 와 $y = (c,d)$ 를 두 복소수라고 하자. 우리는 $a = c$ �
 
 우리는 이렇게 정의한다.
 
-1. $x + y = (a + c, b + d)$
-2. $xy = (ac - bd, ad + bc)$
+- $x + y = (a + c, b + d)$
+
+- $xy = (ac - bd, ad + bc)$
 
 #### 해설
 
@@ -130,7 +131,7 @@ $$a = \operatorname{Re}(z), \qquad b = \operatorname{Im}(z)$$
 
 #### 해설
 
-(작성중)
+이 정의에서는 어떤 복소수의 허수 부분만 부호를 바꾼 값인 켤레 복소수의 개념을 정의하면서, 복소수의 실수부와 허수부를 표현하기 위한 기호를 정의한다. 앞으로 켤레 복소수는 다양한 연산들을 간편하게 진행하는데 도움을 줄 것이다.
 
 ### 1.31 Theorem
 
@@ -141,9 +142,13 @@ $$a = \operatorname{Re}(z), \qquad b = \operatorname{Im}(z)$$
 3. $z + \overline{z} = 2\operatorname{Re}(z), \ z - \overline{z} = 2i\operatorname{Im}(z)$
 4. $z\overline{z}$ 는 실수이고 양수이다. ($z = 0$ 인 경우를 제외하고)
 
+#### 증명
+
+(a), (b), 그리고 (c)는 자명하다. (d)를 증명하기 위해서, 
+
 #### 해설
 
-(작성중)
+이 정리에서는 Definition 1.30 에서 정의했던 켤레 복소수의 다양한 성질들을 
 
 ### 1.32 Definition
 
