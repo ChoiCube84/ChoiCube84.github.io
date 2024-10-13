@@ -48,7 +48,7 @@ tags:
 
 - The Real Field, The Extended Real Number System: 실수체의 정의에 대해 알아보고, 이를 살짝 변형하여 무한대 기호 $(+\infty,\ -\infty)$ 를 포함한 확장 실수계에 대해 배울 것이다.
 
-- The Complex Field, Euclidean Spaces: 실수체의 정의를 기반으로헌 복소수체와 유클리드 공간의 정의와 성질에 대해 뱅루 것이다.
+- The Complex Field, Euclidean Spaces: 실수체의 정의를 기반으로 한 복소수체와 유클리드 공간의 정의와 성질에 대해 배울 것이다.
 
 - Appendix: 우리가 앞에서까지 배우는 것은 실수체의 '정의' 이다. 따라서 실제로 실수체를 '어떻게 만드는지' 는 다루지 않는데, 부록에서는 실제로 실수체를 구성하는 방법에 대해 배울 것이다.
 
