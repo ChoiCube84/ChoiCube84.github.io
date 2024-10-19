@@ -119,11 +119,11 @@ A4와 M4의 경우에는, 연산 결과 자기자신이 나오게하는 '0'과 '
   
 - (A2), (M2): $p + q = \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd} = \frac{bc+ad}{db} = \frac{c}{d} + \frac{a}{b} = q + p$ 이고, $pq = \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd} = \frac{ca}{db} = qp$ 이다. 따라서 $\mathbb{Q}$ 에서는 덧셈과 곱셈 모두 교환 법칙이 성립한다. <br> <br>
 
-- (A3), (M3): $(p + q) + r = \frac{ad+bc}{bd} + \frac{e}{f} = \frac{adf + bcf + bde}{bdf} = \frac{a}{b} + \frac{cf + de}{df} = p + (q + r)$ 이고, $(pq)r = \frac{ac}{bd} \cdot \frac{e}{f} = \frac{ace}{bdf} = \frac{a}{b} \cdot \frac{ce}{df} = p(qr)$ 이다. 따라서 $\mathbb{Q}$ 에서는 (WIP)  <br> <br>
+- (A3), (M3): $(p + q) + r = \frac{ad+bc}{bd} + \frac{e}{f} = \frac{adf + bcf + bde}{bdf} = \frac{a}{b} + \frac{cf + de}{df} = p + (q + r)$ 이고, $(pq)r = \frac{ac}{bd} \cdot \frac{e}{f} = \frac{ace}{bdf} = \frac{a}{b} \cdot \frac{ce}{df} = p(qr)$ 이다. 따라서 $\mathbb{Q}$ 에서는 덧셈과 곱셈 모두 결합 법칙이 성립한다.  <br> <br>
   
-- (A4), (M4): (WIP) <br> <br>
+- (A4), (M4): $\frac{0}{1} + p = \frac{0}{1} + \frac{a}{b} = \frac{0}{b} + \frac{a}{b} = \frac{0+a}{b} = \frac{a}{b} = p$ 이고, $\frac{1}{1} \cdot p = \frac{1}{1} \cdot \frac{a}{b} = \frac{1 \cdot a}{1 \cdot b} = \frac{a}{b} = p$ 이다. $\frac{0}{1}$ 과 $\frac{1}{1}$ 은 모두 유리수 이므로, $\mathbb{Q}$ 는 덧셈과 곱셈에 대해서 모두 항등원을 갖는다. <br> <br>
   
-- (A5), (M5): (WIP) <br> <br>
+- (A5), (M5): $-p = \frac{-a}{b}$ 라고 두면, $p + (-p) = \frac{a}{b} + \frac{-a}{b} = \frac{0}{b} = 0$ 이고, $p$ 가 $0$ 이 아닐 때 $\frac{1}{p} = \frac{b}{a}$ 라고 두면, $p \cdot \frac{1}{p} = \frac{a}{b} \cdot \frac{b}{a} = \frac{ab}{ab} = 1$ 이다. 따라서 $\mathbb{Q}$ 는 모든 원소에 대해 덧셈과 곱셈의 역원을 가진다. (물론 0의 곱셈에서의 역원은 빼고.) <br> <br>
   
 - The distributive law (분배 법칙): (WIP) 
   
@@ -261,7 +261,15 @@ field의 공리는 모든 $x,y,z \in F$ 에 대하여 아래 문장들을 암시
 
 <br>
   
-- (a) 
+- (a) 만약 $x > 0$ 이면, $0 = -x + x > -x + 0 = -x$ 이므로, $0 > -x$, 즉 $-x < 0$ 가 성립한다.
+
+- (b) (WIP)
+  
+- (c) (WIP)
+  
+- (f) (WIP)
+  
+- (e) (WIP)                                                 
   
 </details>
 
