@@ -92,7 +92,7 @@ A4와 M4의 경우에는, 연산 결과 자기자신이 나오게하는 '0'과 '
 
 \\[x+(-y), x\cdot\left(\frac{1}{y}\right), (x+y)+z, (xy)z, xx, xxx, x+x, x+x+x, \cdots\\]
 
-	와 같은 것들을 아래의
+와 같은 것들을 아래의
 
 \\[x-y, \frac{x}{y}, x+y+z, xyz, x^2, x^3, 2x, 3x, \cdots\\]
 
@@ -113,17 +113,17 @@ A4와 M4의 경우에는, 연산 결과 자기자신이 나오게하는 '0'과 '
 
 <br>
   
-증명에 앞서 두 유리수를 $p = \frac{a}{b}$, $q = \frac{c}{d}$ 로 표기하겠다. (이 때 $b$ 와 $d$ 는 $0$ 이 아니다.)
+증명에 앞서 두 유리수를 $p = \frac{a}{b}$, $q = \frac{c}{d}$, $r = \frac{e}{f}$ 로 표기하겠다. (이 때 $b$, $d$, $f$ 는 $0$ 이 아니다.) <br> <br> 
   
-- (A1), (M1): 두 유리수를 더하거나 곱한 건 당연히 유리수가 된다. $p + q = \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd}$ 이고, $\frac{ad+bc}{bd}$ 는 당연히 유리수이다. $ad+bc$ 가 정수이고 $bd$ 가 $0$ 이 아닌 정수이기 때문이다. 마찬가지로, $pq = \frac{a}{b}\frac{c}{d} = \frac{ac}{bd}$ 도 당연히 유리수이다. $ac$ 가 정수이고, $bd$ 가 $0$ 이 아닌 정수이기 때문이다.
+- (A1), (M1): 두 유리수를 더하거나 곱한 건 당연히 유리수가 된다. $p + q = \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd}$ 이고, $\frac{ad+bc}{bd}$ 는 당연히 유리수이다. $ad+bc$ 가 정수이고 $bd$ 가 $0$ 이 아닌 정수이기 때문이다. 마찬가지로, $pq = \frac{a}{b}\frac{c}{d} = \frac{ac}{bd}$ 도 당연히 유리수이다. $ac$ 가 정수이고, $bd$ 가 $0$ 이 아닌 정수이기 때문이다. <br> <br>
   
-- (A2), (M2): $p + q = \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd} = \frac{bc+ad}{db} = \frac{c}{d} + \frac{a}{b} = q + p$ 이고, $pq = \frac{a}{b}\frac{c}{d} = \frac{ac}{bd} = \frac{ca}{db} = qp$ 이다. 따라서 유리수는 덧셈과 곱셈 모두 교환 법칙이 성립한다.
+- (A2), (M2): $p + q = \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd} = \frac{bc+ad}{db} = \frac{c}{d} + \frac{a}{b} = q + p$ 이고, $pq = \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd} = \frac{ca}{db} = qp$ 이다. 따라서 $\mathbb{Q}$ 에서는 덧셈과 곱셈 모두 교환 법칙이 성립한다. <br> <br>
 
-- (A3), (M3): (WIP)
+- (A3), (M3): $(p + q) + r = \frac{ad+bc}{bd} + \frac{e}{f} = \frac{adf + bcf + bde}{bdf} = \frac{a}{b} + \frac{cf + de}{df} = p + (q + r)$ 이고, $(pq)r = \frac{ac}{bd} \cdot \frac{e}{f} = \frac{ace}{bdf} = \frac{a}{b} \cdot \frac{ce}{df} = p(qr)$ 이다. 따라서 $\mathbb{Q}$ 에서는 (WIP)  <br> <br>
   
-- (A4), (M4): (WIP)
+- (A4), (M4): (WIP) <br> <br>
   
-- (A5), (M5): (WIP)
+- (A5), (M5): (WIP) <br> <br>
   
 - The distributive law (분배 법칙): (WIP) 
   
@@ -167,7 +167,9 @@ A4와 M4의 경우에는, 연산 결과 자기자신이 나오게하는 '0'과 '
 이제 (b)의 증명은 (a)에서 $z$ 를 $0$ 으로 설정하면 되고, (c)의 증명은 $z$ 를 $-x$ 로 설정하면 된다. (d)의 증명은 (c)에서 $x$ 를 $-x$ 로 설정하면 된다.
   
 </details>
-  
+
+<br>
+
 ### 1.15 Proposition
 
 곱셈의 공리는 아래의 문장들을 암시한다.
