@@ -125,7 +125,7 @@ A4와 M4의 경우에는, 연산 결과 자기자신이 나오게하는 '0'과 '
   
 - (A5), (M5): $-p = \frac{-a}{b}$ 라고 두면, $p + (-p) = \frac{a}{b} + \frac{-a}{b} = \frac{0}{b} = 0$ 이고, $p$ 가 $0$ 이 아닐 때 $\frac{1}{p} = \frac{b}{a}$ 라고 두면, $p \cdot \frac{1}{p} = \frac{a}{b} \cdot \frac{b}{a} = \frac{ab}{ab} = 1$ 이다. 따라서 $\mathbb{Q}$ 는 모든 원소에 대해 덧셈과 곱셈의 역원을 가진다. (물론 0의 곱셈에서의 역원은 빼고.) <br> <br>
   
-- The distributive law (분배 법칙): (WIP) 
+- The distributive law (분배 법칙): $x(y+z) = \frac{a}{b}(\frac{c}{d}+\frac{e}{f}) = \frac{a}{b} \cdot \frac{cf + de}{df} = \frac{a(cf + de)}{bdf} = \frac{acf + ade}{bdf} = \frac{acf}{bdf} + \frac{ade}{bdf} = \frac{a}{b} \cdot \frac{cf}{df} + \frac{a}{b} \cdot \frac{de}{df} = \frac{a}{b} \cdot \frac{c}{d} + \frac{a}{b} \cdot \frac{e}{f} = xy + xz$ 이므로, $\mathbb{Q}$ 의 덧셈과 곱셈은 분배 법칙을 만족한다. $\blacksquare$
   
 </details>
 
@@ -261,8 +261,8 @@ field의 공리는 모든 $x,y,z \in F$ 에 대하여 아래 문장들을 암시
 
 <br>
   
-- (a) 만약 $x > 0$ 이면, $0 = -x + x > -x + 0 = -x$ 이므로, $0 > -x$, 즉 $-x < 0$ 가 성립한다.
-
+- (a) 만약 $x > 0$ 이면, $0 = -x + x > -x + 0 = -x$ 이므로, $0 > -x$, 즉 $-x < 0$ 가 성립한다. 만약 $x < 0$ 이라면, $0 = -x + x < -x + 0 = -x$ 이므로, $-x > 0$ 이다. 이로써 (a) 가 증명되었다.
+  
 - (b) (WIP)
   
 - (c) (WIP)
